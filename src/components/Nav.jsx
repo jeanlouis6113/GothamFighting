@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 
@@ -10,10 +9,21 @@ function Nav() {
             <nav>
                 <ul>
                     <li>
-                        <Link  exact to="/Logo">Accueil</Link>
+                        <Link exact to="/">Accueil</Link>
                     </li>
-                    
-             
+                    <li>
+                        <Link to="/BouttonBio">{pageBio}</Link>
+                    </li>
+                    <li>
+                        <Link to="/BouttonPlay">Combat</Link>
+                    </li>
+                    <li>
+                        <Link to="/PageBio">PageBio</Link>
+                    </li>
+                    <li>
+                        <Link to="/PageCombat">PageCombat</Link>
+                    </li>
+
                 </ul>
             </nav>
 

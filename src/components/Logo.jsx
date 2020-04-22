@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 export class Logo extends React.Component {
@@ -6,7 +7,7 @@ export class Logo extends React.Component {
     render() {
         return (
             <div className="logo">
-                 <img src='/images/logoGotham.svg' alt="Logo Gotham"/>
+                 <Link to="/"><img src='/images/logoGotham.svg' alt="Logo Gotham"/></Link>
             </div>
         )
     }
