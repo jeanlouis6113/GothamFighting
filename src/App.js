@@ -10,6 +10,8 @@ function App() {
       <Logo/>
       <Switch>
                 <Route exact path="/Logo" component={Logo} />
+                {/* <Route exact path="/ButtonBio" component={ButtonBio} />
+                <Route exact path="/ButtonPlay" component={ButtonPlay}  /> */}
                
             </Switch>
     </div>
