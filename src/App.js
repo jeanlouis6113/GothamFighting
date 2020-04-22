@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route, Switch, } from 'react-router-dom';
-import Logo from './components/Logo'
-import ButtonBio from './components/ButtonBio'
-import ButtonPlay from './components/ButtonPlay'
-import PageBio from './components/PageBio'
-import PageCombat from './components/PageCombat'
+import Logo from './components/Logo';
+import ButtonBio from './components/ButtonBio';
+import ButtonPlay from './components/ButtonPlay';
+import ButtonSettings from './components/ButtonSettings';
+import PageBio from './components/PageBio';
+import PageCombat from './components/PageCombat';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Logo />
       <ButtonBio />
       <ButtonPlay />
+      <ButtonSettings />
       <Switch>
         <Route exact path="/" />
         <Route exact path="/PageBio" component={PageBio} />
