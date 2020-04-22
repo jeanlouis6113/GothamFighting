@@ -18,8 +18,8 @@ function App() {
         <Route exact path="/PageBio" component={PageBio} />
         <Route path="/PageCombat" component={PageCombat} />
       </Switch>
-
     </div>
+    
   );
 }
 
