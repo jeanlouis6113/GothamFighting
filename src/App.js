@@ -5,12 +5,15 @@ import ButtonBio from './components/ButtonBio'
 import ButtonPlay from './components/ButtonPlay'
 import PageBio from './components/PageBio'
 import PageCombat from './components/PageCombat'
+import Music from './components/Music'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+     
       <Logo />
+      <Music/>
       <ButtonBio />
       <ButtonPlay />
       <Switch>
