@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 class ButtonBio extends React.Component {
     render() { 
         return ( 
-            <div class="wrapper-button">
+            <div className="wrapper-button">
                 <Link to="/PageBio">
-                  <p class="btn-homepage" data-text="bio">Bio</p>
+                    <p className="btn-homepage" data-text="bio">Bio</p>
                 </Link>
             </div>
         );
