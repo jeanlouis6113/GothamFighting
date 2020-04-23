@@ -7,7 +7,7 @@ import ButtonPlay from './components/ButtonPlay';
 import ButtonSettings from './components/ButtonSettings';
 import PageBio from './components/PageBio';
 import PageCombat from './components/PageCombat';
-import Music from './components/Music';
+import Video from './components/Video';
 import './App.css';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Carrousel />
       <ButtonBio />
       <ButtonPlay />
-      <Music/>
+      <Video/>
       <ButtonSettings />
       <Switch>
         <Route exact path="/" />

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Media, Player, controls } from 'react-media-player'
-import "./Music.css"
+import "./Video.css"
 const { PlayPause, MuteUnmute } = controls
 
-class Music extends Component {
+class Video extends Component {
   render() {
     return (
       <Media >
@@ -21,4 +21,4 @@ class Music extends Component {
     )
   }
 }
-export default Music;
+export default Video;
