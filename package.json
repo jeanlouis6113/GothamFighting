@@ -10,10 +10,13 @@
     "axios": "^0.19.2",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.13.1",
     "react-media-player": "^0.7.9",
+    "react-elastic-carousel": "^0.4.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "sass": "^1.26.3"
   },
   "scripts": {
     "start": "react-scripts start",
