@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Media, Player, controls } from 'react-media-player'
-import "./Video.css"
-const { PlayPause, MuteUnmute } = controls
+import React, { Component } from 'react';
+import { Media, Player } from 'react-media-player';
+import "./Video.css";
 
 class Video extends Component {
   render() {
@@ -13,8 +12,6 @@ class Video extends Component {
             /> 
           </div>
           <div className="media-controls">
-            <PlayPause />
-            <MuteUnmute />
           </div>
         </div>
       </Media>
