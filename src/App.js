@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, } from 'react-router-dom';
 import Logo from './components/Logo';
+import Carrousel from './components/Carrousel'
 import ButtonBio from './components/ButtonBio';
 import ButtonPlay from './components/ButtonPlay';
 import ButtonSettings from './components/ButtonSettings';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Logo />
+      <Carrousel />
       <ButtonBio />
       <ButtonPlay />
       <ButtonSettings />
@@ -21,7 +23,6 @@ function App() {
         <Route path="/PageCombat" component={PageCombat} />
       </Switch>
     </div>
-    
   );
 }
 
