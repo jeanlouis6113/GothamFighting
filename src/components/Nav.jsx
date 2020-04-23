@@ -9,7 +9,7 @@ function Nav() {
             <nav>
                 <ul>
                     <li>
-                        <Link exact to="/">Accueil</Link>
+                        <Link exact to="/PageHome">Accueil</Link>
                     </li>
                     <li>
                         <Link to="/BouttonBio">{pageBio}</Link>
