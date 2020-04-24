@@ -5,13 +5,20 @@ import ButtonBio from './ButtonBio';
 import ButtonPlay from './ButtonPlay';
 
 class PageHome extends React.Component {
+    batSignal = () => {
+        const video = document.querySelector(".masquer");
+        video.setAttribute("class", "");
+        const imageB = document.getElementById("imageBonus");
+        imageB.setAttribute("class", "masquer");
+        
+    };
     render() {
         return (
             <div>
                 <Grid container direction="column">
                     <Grid container justify="center">
                         <Grid item xs={9}>
-                        <h1>Gotham Fighting</h1>
+                        <h1 onClick={this.batSignal}>Gotham Fighting</h1>
                         </Grid>
                         <Grid item xs={9}>
                         <Carrousel />
@@ -33,4 +40,4 @@ class PageHome extends React.Component {
     }
 }
 
-export default PageHome
+export default PageHome;

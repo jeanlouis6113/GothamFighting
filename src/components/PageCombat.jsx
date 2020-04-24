@@ -7,13 +7,7 @@ export class PageCombat extends React.Component {
     render() {
         return (
             <div className="couleur">
-                <p>Combat</p>
-                <p>Combat</p>
-                <p>Combat</p>
-                <p>Combat</p>
-                <p>Combat</p>
-                <p>Combat</p>
-                <p>Combat</p>
+               <h1>Page en construction</h1>
             </div>
         )
     }

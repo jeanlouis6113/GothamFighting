@@ -7,15 +7,7 @@ export class pageBio extends React.Component {
     render() {
         return (
             <div className="general">
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
-                 <p>Bonjour ça vas</p>
+          <h1>Page en construction</h1>
             </div>
         )
     }
