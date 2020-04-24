@@ -22,3 +22,10 @@ h1 {
   color: white;
 }
 
+audio
+{
+  margin: 10px;
+  height: 20px;
+  display: none;
+
+}
