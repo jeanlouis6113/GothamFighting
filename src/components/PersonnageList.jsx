@@ -12,7 +12,7 @@ function PersonnageList(props) {
           {characters.map(character => (
           <Grid item sm={11} md={5} lg={4} key={characters.id} className="Character">
               <Link to={`/PageBio/characters/${character.id}`}>
-                  <CardTest key={characters.id}/>
+                  <CardTest key={character.id} charactersId={character.id}/>
               </Link>
           </Grid>
         ))}
