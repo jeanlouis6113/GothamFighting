@@ -4,8 +4,72 @@
       "name": "Batgirl"
     },
     {
-      "id": 69,
+      "id": 70,
       "name": "Batman"
+    },
+    {
+      "id": 165,
+      "name": "Catwoman"
+    },
+    {
+      "id": 309,
+      "name": "Harley Quinn"
+    },
+    {
+      "id": 457,
+      "name": "Mister Freeze"
+    },
+    {
+      "id": 522,
+      "name": "Poison Ivy"
+    },
+    {
+      "id": 538,
+      "name": "Ra's Al Ghul"
+    },
+    {
+      "id": 561,
+      "name": "Robin"
+    },
+    {
+      "id": 609,
+      "name": "Solomon Grundy"
+    },
+    {
+      "id": 370,
+      "name": "Joker"
+    },
+    {
+      "id": 514,
+      "name": "Pinguin"
+    },
+    {
+      "id": 386,
+      "name": "Killer Croc"
+    },
+    {
+      "id": 461,
+      "name": "Mister Zsasz"
+    },
+    {
+      "id": 60,
+      "name": "Bane"
+    },
+    {
+      "id": 558,
+      "name": "Riddler"
+    },
+    {
+      "id": 576,
+      "name": "Scarecrow"
+    },
+    {
+      "id": 678,
+      "name": "Two-Face"
+    },
+    {
+      "id": 491,
+      "name": "Nightwing"
     }
-  ]
+]
   

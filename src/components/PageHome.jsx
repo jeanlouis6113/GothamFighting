@@ -1,5 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import Logo from './Logo';
+import ButtonSettings from './ButtonSettings';
 import Carrousel from './Carrousel'
 import ButtonBio from './ButtonBio';
 import ButtonPlay from './ButtonPlay';
@@ -15,6 +17,14 @@ class PageHome extends React.Component {
     render() {
         return (
             <div>
+                <Grid container justify="space-between">
+                    <Grid container item xs={1}>
+                        <Logo />
+                    </Grid>
+                    <Grid>
+                        <ButtonSettings />              
+                    </Grid>
+                </Grid>
                 <Grid container direction="column">
                     <Grid container justify="center">
                         <Grid item xs={9}>

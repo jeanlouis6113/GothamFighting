@@ -1,24 +1,34 @@
 import React from 'react';
-import './PageBio.css'
-
 import PersonnageList from './PersonnageList';
+import Logo from './Logo';
+import ButtonSettings from './ButtonSettings';
+import Grid from '@material-ui/core/Grid';
+
 
 
 
 export class pageBio extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
             <div>
-                <PersonnageList/>
+                <Grid container justify="space-between">
+                    <Grid container item xs={1}>
+                        <Logo />
+                    </Grid>
+                    <Grid>
+                        <ButtonSettings />              
+                    </Grid>
+                </Grid>
+                <PersonnageList character={this.props.character} />
             </div>
-            
-            
-            // <div className="general">
-            //     <h1>Page en construction</h1>
-            // </div>
         )
     }
+    
 }
+
 
 export default pageBio;

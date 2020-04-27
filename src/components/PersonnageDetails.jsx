@@ -1,37 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import PersonnageList from './PersonnageList';
 import Grid from '@material-ui/core/Grid';
+import Logo from './Logo';
+import ButtonSettings from './ButtonSettings';
 
-
-/* characterId: '',
-        name: '',
-        fullName: '',
-        placeOfBirth: '',
-        firstAppearance: '',
-        publisher: '',
-        aliases: '',
-        alignments: '',
-        groupAffiliation: '',
-        relatives: '',
-        height: '',
-        weight: '',
-        race: '',
-        gender: '',
-        occupation: '',
-        baseOfOperation: '',
-        image: '',
-        isDisplayed: false, 
-
-const idList = [63, 69, 165, 309, 457, 522, 538, 561, 609, 370, 514, 386, 461, 60, 558, 576, 678, 491];
-
-
-                powerstats: '',
-                biography: '',
-                appearance: '',
-                work: '',
-                connections : '',
-*/
 
 class PersonnageDetails extends Component {
     constructor(props) {
@@ -64,22 +36,13 @@ class PersonnageDetails extends Component {
     //     }
     // }
 
-
+    // Lance l'appel à l'API lors du montage du composant
     componentDidMount() {
+        // const characterId = 63;
         const characterId = this.props.match.params.characterId;
-        console.log("mount: ", characterId);
-        // for (let i = 0 ; i < idList.length; i++) {
-        //     const characterId = idList[i]
-        //     this.loadPersonnageDetails(characterId);
-        // }
         this.loadPersonnageDetails(characterId);
     }
 
-    // componentDidMount() {
-    //     const characterId = this.props.match.params.characterId;
-    //     console.log(characterId);
-    //     this.loadCharacterDetails(characterId);
-    // }
 
     loadPersonnageDetails(characterId) {
         const url = `https://www.superheroapi.com/api.php/108881107445202/${characterId}`;
@@ -87,33 +50,32 @@ class PersonnageDetails extends Component {
         axios.get(url)
             .then(response => response.data)
             .then(data => {
-                console.log(`Data: ${data}`);
-                this.setState({ character: data })
+                this.setState({ character: data });
+                this.props.updateCharacter(data);
             });
     }
     
 
-    // const characters = this.state.character;
-    // console.log(characters);
-    //     return (
-    //         <ul>
-    //             {characters.map(exercice => <li><PersonnageList  {...exercice} /></li>)}
-    //         </ul>
-    //     );
-
-
     render() {
         const character = this.state.character;
-        console.log(character);
         return (
+        
         <div>
+            <Grid container justify="space-between">
+                    <Grid container item xs={1}>
+                        <Logo />
+                    </Grid>
+                    <Grid>
+                        <ButtonSettings />              
+                    </Grid>
+                </Grid>
             <Grid container direction="row" justify="center" alignItems="flex-start">
                     <Grid item xs={6}>
                         <Grid container direction="column" alignItems="flex-start" >
                             <Grid item xs={11}>
                                 <h2>{character.name}</h2>
                             </Grid>
-                            <Grid item xs={11} className="CharacterDetails">
+                            <Grid item xs={6} className="CharacterDetails">
                                 <img src={character.image.url} alt={character.name}/>
                             </Grid>
                         </Grid>
@@ -132,12 +94,38 @@ class PersonnageDetails extends Component {
                                 <p>Power: {character.powerstats.power}</p>
                                 <p>Combat: {character.powerstats.combat}</p>
                             </Grid>
+
                             <Grid item>
                                 <h3>Biography</h3>
-                                <p>Full Name: {character.biography.fullName}</p>
-                                <p>Alter Egos: {character.biography.alterEgos}</p>
-                                <p>Aliases: {character.biography.aliases}</p>
+                                <p>Full Name: {character.biography["full-name"]}</p>
+                                <p>Alter Egos: {character.biography["alter-egos"]}</p>
+                                <p>Aliases: {`${character.biography.aliases}`}</p>
+                                <p>Place of Birth: {character.biography["place-of-birth"]}</p>
+                                <p>First Appearance: {character.biography["first-appearance"]}</p>
                                 <p>Publisher: {character.biography.publisher}</p>
+                                <p>Alignment: {character.biography.alignment}</p>
+                            </Grid>
+
+                            <Grid item>
+                                <h3>Appearance</h3>
+                                <p>Gender: {character.appearance.gender}</p>
+                                <p>Race: {character.appearance.race}</p>
+                                <p>Height: {`${character.appearance.height}`}</p>
+                                <p>Weight: {`${character.appearance.weight}`}</p>
+                                <p>Eye Color: {character.appearance["eye-color"]}</p>
+                                <p>Hair Color: {character.appearance["hair-color"]}</p>
+                            </Grid>
+
+                            <Grid item>
+                                <h3>Work</h3>
+                                <p>Occupation: {character.work.occupation}</p>
+                                <p>Base: {`${character.work.base}`}</p>
+                            </Grid>
+
+                            <Grid item>
+                                <h3>Connections</h3>
+                                <p>Group Affiliation: {character.connections["group-affiliation"]}</p>
+                                <p>Relatives: {`${character.connections.relatives}`}</p>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -145,13 +133,8 @@ class PersonnageDetails extends Component {
             
         </div>
         );
-        };
+    };
         
 }
 
-
 export default PersonnageDetails;
-
-// <ul className='listeTwo'>{listeTwo.map((item, index) =>
-//   <li key={index}>{item}</li>
-// )}</ul>
