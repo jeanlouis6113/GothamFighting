@@ -51,7 +51,6 @@ class PersonnageDetails extends Component {
             .then(response => response.data)
             .then(data => {
                 this.setState({ character: data });
-                this.props.updateCharacter(data);
             });
     }
     

@@ -8,9 +8,6 @@ import Grid from '@material-ui/core/Grid';
 
 
 export class pageBio extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
