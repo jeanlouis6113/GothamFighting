@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F94%2F16%2Fd0%2F9416d03b836bbb329a211d60da6a8884.jpg);
+  color: white;
 }
 
 code {
@@ -30,4 +31,9 @@ audio
   height: 20px;
   display: none;
 
+}
+
+.CharacterDetails img {
+  border-style: ridge;
+  border-color: #f5e51b;
 }

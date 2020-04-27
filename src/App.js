@@ -7,13 +7,13 @@ import PageCombat from './components/PageCombat';
 import PageHome from './components/PageHome';
 import Video from './components/Video';
 import ButtonSettings from './components/ButtonSettings';
+import PersonnageDetails from './components/PersonnageDetails'
 import './App.css';
-
 
 function App() {
   return (
     <div className="App">
-      <Grid container   justify="space-between">
+      <Grid container justify="space-between">
         <Grid container item xs={1}>
           <Logo />
         </Grid>
@@ -26,11 +26,12 @@ function App() {
             <Route exact path="/" component={PageHome}/>
             <Route exact path="/PageBio" component={PageBio} />
             <Route path="/PageCombat" component={PageCombat} />
+            <Route path="/PageBio/characters/:characterId" component={PersonnageDetails} />
         </Switch>
         <Grid container item xs={5}>
-                        <Video />
-                    </Grid>
- 
+          <Video />
+        </Grid>
+
     </div>
   );
 }
