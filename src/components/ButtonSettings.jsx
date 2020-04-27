@@ -12,13 +12,23 @@ class ButtonSettings extends React.Component {
             isToggleOn: !state.isToggleOn
         }),
         );
-        console.log(this.state.isToggleOn)
+        console.log(this.state.isToggleOn);
+        this.playPause()
     }
-    //
+    
+    playPause(){
+        const song = document.getElementById('settingsBtn');
+        if (song.paused && song.currentTime >= 0 && !song.ended) {
+            song.play();
+        } else {
+            song.pause();
+        }
+    }
+
     render() { 
         return ( 
-            <div id="seetingsIcon" onClick={this.handleClick}>
-                <img id="settingsIcon" src='./images/paramIconGotham.svg' alt="Settings Button"/>
+            <div className="settingsIcon" onClick={this.handleClick}>
+                <img id="settingsIcon" src={this.state.isToggleOn ? './images/speakerOn.png' : './images/speakerOff.png'} alt="Settings Button"/>
             </div>
         );
     }

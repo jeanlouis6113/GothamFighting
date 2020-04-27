@@ -14,7 +14,9 @@ code {
 }
 
 #settingsIcon {
-    width: 8vh;
+    width: 3vh;
+    margin-top: 5px;
+    margin-right: 5px;
   }
 
 h1 {
