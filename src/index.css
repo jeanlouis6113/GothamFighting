@@ -37,3 +37,8 @@ audio
   border-style: ridge;
   border-color: #f5e51b;
 }
+
+.avatarBio {
+  max-width: 85%;
+  max-height: 80%;
+}

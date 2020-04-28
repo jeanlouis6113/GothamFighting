@@ -7,12 +7,19 @@ class CardTest extends Component{
             error: null,
             isLoaded: false,
             urlImage:'/images/logoGotham.svg',
-            nameCharacter: ''
+            nameCharacter: 'character'
         };
     }
 
+    componentDidUpdate() {
+        console.log("Props Update:", this.props);
+        if (!this.state.isLoaded) {
+            this.loadImage(this.props.charactersId);
+        }
+    }
+
     componentDidMount() {
-        console.log("Props", this.props);
+        console.log("Props Mount:", this.props);
         this.loadImage(this.props.charactersId);
     }
 
@@ -40,19 +47,19 @@ class CardTest extends Component{
     render() {
         const {isLoaded, urlImage, nameCharacter, error} = this.state;
         if (error) {
-            console.log("url", urlImage)
+            console.log("url fetched:", urlImage)
             return (
                 <div>
                     <p>Erreur : {error.message}</p>
                     <img src={urlImage} alt={nameCharacter} id="avatarBio"/>
                 </div>)
         } else if (!isLoaded) {
-            return <div>Chargement…</div>;
+            return <img src="/images/gothamPlaceholder.jpg" alt={nameCharacter} className="avatarBio"/>;
         } else {
             console.log("url", urlImage)
             return (
                 <div>
-                    <img src={urlImage} alt={nameCharacter} id="avatarBio"/>
+                    <img src={urlImage} alt={nameCharacter} className="avatarBio"/>
                 </div>
             );
         }

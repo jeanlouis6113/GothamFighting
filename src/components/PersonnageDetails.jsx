@@ -3,6 +3,8 @@ import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import Logo from './Logo';
 import ButtonSettings from './ButtonSettings';
+import ButtonBack from './ButtonBack';
+import { Link } from 'react-router-dom';
 
 
 class PersonnageDetails extends Component {
@@ -67,7 +69,10 @@ class PersonnageDetails extends Component {
                     <Grid>
                         <ButtonSettings />              
                     </Grid>
-                </Grid>
+            </Grid>
+            <Link to={"/PageBio/"}>
+                <ButtonBack />
+            </Link>
             <Grid container direction="row" justify="center" alignItems="flex-start">
                     <Grid item xs={6}>
                         <Grid container direction="column" alignItems="flex-start" >
