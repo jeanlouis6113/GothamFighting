@@ -11,19 +11,26 @@ function Carrousel() {
     return (
         <Link to="/">
             <AwesomeSlider animation="cubeAnimation" className="slider-homepage" >
-                <div data-src="./images/batmanCarrousel.jpeg">
-                    <p>BATMAN</p>
+                <div>
+                    <Link to='/PageBio/characters/370'>
+                        <img src="./images/theJokerCarrousel.webp" alt="The Joker"></img>
+                    </Link>
                 </div>
                 <div>
-                    <img id="imageBonus" src="./images/HommeMystere.png" alt=""/>
+                    <Link to='/PageBio/characters/70'>
+                        <img src="./images/batmanCarrousel.webp" alt="Batman"/>
+                    </Link>
+                </div>
+                <div>
+                    <Link to='/PageBio/characters/558'>
+                        <img src="./images/HommeMystere.png" alt="Riddler"/>
+                    </Link>
                     <Video className="masquer"/>
                 </div>
-
-                <div data-src="./images/theJokerCarrousel.webp">
-                    <p>THE JOKER</p>
-                </div>
-                <div data-src="./images/thePenguinCarrousel.jpeg">
-                    <p>THE PENGUIN</p>
+                <div>
+                    <Link to='/PageBio/characters/514'>
+                        <img src="./images/thePenguinCarrousel.jpeg" alt="The Penguin"/>
+                    </Link>
                 </div>
             </AwesomeSlider>
         </Link>

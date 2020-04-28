@@ -1,4 +1,5 @@
 body {
+  max-width: 95%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F94%2F16%2Fd0%2F9416d03b836bbb329a211d60da6a8884.jpg);
+  background-size: cover;
   color: white;
   background-attachment: fixed;
 }
@@ -51,8 +53,10 @@ audio
 }
 
 .avatarBio {
+  min-width: 232px;
   max-width: 100%;
   border-radius: 10%;
+  max-height: 309.351px; 
 }
 
 
