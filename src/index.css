@@ -30,6 +30,13 @@ h1 {
   color: white;
 }
 
+h4:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: 
+  -webkit-linear-gradient(left, yellow, orange,yellow, red); }
+
 audio
 {
   margin: 10px;
@@ -53,12 +60,3 @@ audio
   color: white;
   font-weight: bold;
 }
-
-
-
-
-
-/* .avatarName a {
-  text-decoration: underline white;
-  color: white;
-} */
