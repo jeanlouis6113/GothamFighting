@@ -12,13 +12,13 @@ function Carrousel() {
         <Link to="/">
             <AwesomeSlider animation="cubeAnimation" className="slider-homepage" >
                 <div>
-                    <Link className="imageCarrousel" to='/PageBio/characters/370'>
+                    <Link to='/PageBio/characters/370'>
                         <img src="./images/theJokerCarrousel.webp" alt="The Joker"></img>
                     </Link>
                 </div>
                 <div>
                     <Link to='/PageBio/characters/70'>
-                        <img className="imageBonus" src="./images/batmanCarrousel.webp" alt="Batman"/>
+                        <img src="./images/batmanCarrousel.webp" alt="Batman"/>
                     </Link>
                 </div>
                 <div>

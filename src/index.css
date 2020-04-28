@@ -47,11 +47,6 @@ audio
 
 }
 
-
-.imageCarrousel {
-  width: 100%;
-}
-
 .CharacterDetails img {
   border-style: ridge;
   border-color: #f5e51b;
@@ -68,8 +63,4 @@ audio
 .avatarName {
   color: white;
   font-weight: bold;
-}
-
-.awssld__wrapper {
-  background-color: transparent!important;
 }
