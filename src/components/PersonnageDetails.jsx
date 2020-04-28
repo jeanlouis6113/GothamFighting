@@ -3,7 +3,7 @@ import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import Logo from './Logo';
 import ButtonSettings from './ButtonSettings';
-import ButtonBack from './ButtonBack';
+import ButtonBio from './ButtonBio';
 import { Link } from 'react-router-dom';
 
 
@@ -26,21 +26,8 @@ class PersonnageDetails extends Component {
     this.loadPersonnageDetails = this.loadPersonnageDetails.bind(this);
     }
 
-    // componentDidUpdate(previousProps) {
-    //     const {
-    //         match: {
-    //             params: { characterId }
-    //         }
-    //     } = this.props;
-    //     const previousPostId = previousProps.match.params.characterId;
-    //         if (previousPostId !== characterId) {
-    //             this.loadCharacterDetails(characterId);
-    //     }
-    // }
-
     // Lance l'appel à l'API lors du montage du composant
     componentDidMount() {
-        // const characterId = 63;
         const characterId = this.props.match.params.characterId;
         this.loadPersonnageDetails(characterId);
     }
@@ -71,7 +58,7 @@ class PersonnageDetails extends Component {
                     </Grid>
             </Grid>
             <Link to={"/PageBio/"}>
-                <ButtonBack />
+                <ButtonBio />
             </Link>
             <Grid container direction="row" justify="center" alignItems="flex-start">
                     <Grid item xs={6}>
@@ -87,7 +74,7 @@ class PersonnageDetails extends Component {
                     <Grid item xs={6}>
                         <Grid container direction="column">
                             <Grid item>
-                                <h2>Reste des stats</h2>
+                                <h2>Informations</h2>
                             </Grid>
                             <Grid item>
                                 <h3>Powerstats</h3>
@@ -133,6 +120,8 @@ class PersonnageDetails extends Component {
                             </Grid>
                         </Grid>
                     </Grid>
+
+                <ButtonBio />
             </Grid>
             
         </div>

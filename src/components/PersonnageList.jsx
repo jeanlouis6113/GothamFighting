@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import characters from './characters.json';
-import CardTest from './CardTest';
+import CardSelect from './CardSelect';
 import { Grid } from '@material-ui/core';
 
 
@@ -51,7 +51,7 @@ function PersonnageList(props) {
           {apiCharacters.map(character => (
           <Grid item sm={11} md={5} lg={4} key={character.id} className="Character">
               <Link to={`/PageBio/characters/${character.id}`}>
-                  <CardTest key={character.id} {...character}/>
+                  <CardSelect key={character.id} {...character}/>
               </Link>
           </Grid>
         ))}
