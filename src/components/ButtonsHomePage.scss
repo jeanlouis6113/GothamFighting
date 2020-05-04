@@ -1,4 +1,5 @@
 $bg-color: black;
+$bg-img: url("https://thumbs.gfycat.com/FluffyValidArgusfish-size_restricted.gif");
 
 [class*="btn-"] {
 	outline:0;
@@ -26,6 +27,7 @@ $bg-color: black;
 [class*="btn-homepage"] {
 	&::after {
 		background: $bg-color;
+		background-image: $bg-img;
 		border-radius: 120px;
 		content: attr(data-text);
 		color: rgba(255, 255, 255, 0.8);
