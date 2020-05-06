@@ -4,8 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Logo from './Logo';
 import ButtonSettings from './ButtonSettings';
 import ButtonBio from './ButtonBio';
-import { Link } from 'react-router-dom';
-
+import './FloatingImage.scss';
 
 class PersonnageDetails extends Component {
     constructor(props) {
@@ -48,7 +47,7 @@ class PersonnageDetails extends Component {
         const character = this.state.character;
         return (
         
-        <div>
+        <div className="pageDetails">
             <Grid container justify="space-between">
                     <Grid container item xs={1}>
                         <Logo />
@@ -57,69 +56,84 @@ class PersonnageDetails extends Component {
                         <ButtonSettings />              
                     </Grid>
             </Grid>
-            <Link to={"/PageBio/"}>
-                <ButtonBio />
-            </Link>
-            <Grid container direction="row" justify="center" alignItems="flex-start">
-                    <Grid item xs={6}>
-                        <Grid container direction="column" alignItems="flex-start" >
-                            <Grid item xs={11}>
-                                <h2>{character.name}</h2>
-                            </Grid>
-                            <Grid item xs={6} className="CharacterDetails">
-                                <img src={character.image.url} alt={character.name}/>
-                            </Grid>
+            
+            <Grid container direction="row" justify="center" alignItems="center" className="">
+                <Grid item xs={12}>
+                <h2 id="character-name" class="text-center">{character.name}</h2>
+                </Grid>
+                <Grid item xs={12} class="text-center"> 
+                    <p class="short-description">The character {character.name} is the hidden identity of {character.biography["full-name"]}.</p>
+                </Grid>
+            </Grid>
+
+            <Grid container direction="row" justify="center" alignItems="flex-start" className="">
+                <Grid item xs={5}>
+                    <Grid container direction="row" alignItems="flex-start" justify="space-between">
+                        <Grid item xs={5}>
+                            <h3>Identity</h3>
+                            <ul>
+                                <li>Place of Birth: {character.biography["place-of-birth"]}</li>
+                                <li>First Appearance: {character.biography["first-appearance"]}</li>
+                                <li>Publisher: {character.biography.publisher}</li>
+                                <li>Aliases: {`${character.biography.aliases}`}</li>
+                                <li>Alignment: {character.biography.alignment}</li>
+                            </ul>
                         </Grid>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Grid container direction="column">
-                            <Grid item>
-                                <h2>Informations</h2>
-                            </Grid>
-                            <Grid item>
-                                <h3>Powerstats</h3>
-                                <p>Intelligence: {character.powerstats.intelligence}</p>
-                                <p>Strength: {character.powerstats.strength}</p>
-                                <p>Speed: {character.powerstats.speed}</p>
-                                <p>Durability: {character.powerstats.durability}</p>
-                                <p>Power: {character.powerstats.power}</p>
-                                <p>Combat: {character.powerstats.combat}</p>
+
+                        <Grid item xs={5}>
+                            <h3>Appearance</h3>
+                            <ul>
+                                <li>Height: {`${character.appearance.height}`}</li>
+                                <li>Weight: {`${character.appearance.weight}`}</li>
+                                <li>Race: {character.appearance.race}</li>
+                                <li>Gender: {character.appearance.gender}</li>
+                            </ul>
+                        </Grid>
+                            
+                        <Grid container >
+                            <Grid item xs={12}>
+                            <h3>Work</h3>
+                            <ul>
+                                <li>Occupation: {character.work.occupation}</li>
+                                <li>Base of operation: {`${character.work.base}`}</li>
+                            </ul>
                             </Grid>
 
-                            <Grid item>
-                                <h3>Biography</h3>
-                                <p>Full Name: {character.biography["full-name"]}</p>
-                                <p>Alter Egos: {character.biography["alter-egos"]}</p>
-                                <p>Aliases: {`${character.biography.aliases}`}</p>
-                                <p>Place of Birth: {character.biography["place-of-birth"]}</p>
-                                <p>First Appearance: {character.biography["first-appearance"]}</p>
-                                <p>Publisher: {character.biography.publisher}</p>
-                                <p>Alignment: {character.biography.alignment}</p>
-                            </Grid>
-
-                            <Grid item>
-                                <h3>Appearance</h3>
-                                <p>Gender: {character.appearance.gender}</p>
-                                <p>Race: {character.appearance.race}</p>
-                                <p>Height: {`${character.appearance.height}`}</p>
-                                <p>Weight: {`${character.appearance.weight}`}</p>
-                                <p>Eye Color: {character.appearance["eye-color"]}</p>
-                                <p>Hair Color: {character.appearance["hair-color"]}</p>
-                            </Grid>
-
-                            <Grid item>
-                                <h3>Work</h3>
-                                <p>Occupation: {character.work.occupation}</p>
-                                <p>Base: {`${character.work.base}`}</p>
-                            </Grid>
-
-                            <Grid item>
+                            <Grid item xs={12}>
                                 <h3>Connections</h3>
-                                <p>Group Affiliation: {character.connections["group-affiliation"]}</p>
-                                <p>Relatives: {`${character.connections.relatives}`}</p>
+                                <ul>
+                                    <li>Group Affiliation: {character.connections["group-affiliation"]}</li>
+                                    <li>Relatives: {`${character.connections.relatives}`}</li>
+                                </ul>
                             </Grid>
+                        </Grid> 
+                    </Grid>
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Grid container direction="column" alignItems="center" justify="flex-start">
+                        <Grid item>
+                            <h3>Powerstats</h3>
+                        </Grid>
+                        
+                        <Grid item>
+                            <p>Intelligence: {character.powerstats.intelligence}</p>
+                            <p>Strength: {character.powerstats.strength}</p>
+                            <p>Speed: {character.powerstats.speed}</p>
+                            <p>Durability: {character.powerstats.durability}</p>
+                            <p>Power: {character.powerstats.power}</p>
+                            <p>Combat: {character.powerstats.combat}</p>
                         </Grid>
                     </Grid>
+                </Grid>
+
+                <Grid item xs={3}>
+                    <Grid container direction="column" alignContent="center" justify="center" className="  wrapper-image">
+                        <Grid item xs={10} className="floating-box animated-background">
+                            <img src={character.image.url} alt={character.name}/>
+                        </Grid>
+                    </Grid>
+                </Grid>
 
                 <ButtonBio />
             </Grid>
