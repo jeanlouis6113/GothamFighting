@@ -6,6 +6,7 @@ import PageCombat from './components/PageCombat';
 import PageHome from './components/PageHome';
 import Video from './components/Video';
 
+
 import PersonnageDetails from './components/PersonnageDetails'
 import './App.css';
 
@@ -16,7 +17,7 @@ function App() {
           <Route exact path="/" component={PageHome}/>
           <Route exact path="/PageBio" component={PageBio} />
           <Route path="/PageCombat" component={PageCombat} />
-          <Route path="/PageBio/characters/:characterId" component={PersonnageDetails} />} /> 
+          <Route path="/PageBio/characters/:characterId" component={PersonnageDetails} /> 
       </Switch>
       <Grid container item xs={5}>
         <Video />
