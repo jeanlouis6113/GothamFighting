@@ -124,18 +124,54 @@ img {
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
-    50%{background-position:50% 50%}
+    50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 @keyframes AnimationName {
     0%{background-position:0% 50%}
-    50%{background-position:50% 50%}
+    50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 
 .short-description {
   font-size: 2.5vh;
   margin-bottom: 40px;
+}
+/*PAGE PERSONNAGELIST*/
+.selectImage {
+  height: 40vh;
+  min-height: 25vh;
+  border-radius: 10%;
+}
+.playerButton {
+  width: 100%;
+  height: 3vh;
+  border-radius: 10%;
+ 
+}
+
+.selectImage-One {
+  background: linear-gradient(276deg, yellow, black);
+  background-size: 200% auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-animation: AnimationName 10s ease-in infinite;
+  animation: AnimationName 10s ease-in infinite;
+}
+
+.selectImage-Two {
+  background: linear-gradient(276deg, red, rgb(185, 40, 40), rgb(158, 180, 175));
+  background-size: 200% auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-animation: AnimationName 10s ease-in infinite;
+  animation: AnimationName 10s ease-in infinite;
 }
 
 /*BORDURES DEBUGG*/

@@ -5,24 +5,22 @@ import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 
 
-class CardSelect extends Component {
+class SelectedItemTwo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            idOne: '',
-            idTwo: ''
+            id: '',
+            name:'Select your opponent',
+            image:'/images/pointMystere.jpg'
         };
     }
 
-    onClickOne = () => {
-        alert('cacaboudin')
-    }
-
-    onClickTwo = () => {
-        alert('cacaboudin2')
-        // this.setState({
-        //     idTwo: 'truc',
-        // });
+    mettreAjour = (idGiven, nameGiven, imageGiven) =>{
+        this.setState({
+            id: idGiven,
+            name: nameGiven,
+            image: imageGiven
+        });
     }
 
     render() {
@@ -33,21 +31,19 @@ class CardSelect extends Component {
                 <CardActionArea>
                     <CardContent className="avatarName">
                         <Typography gutterBottom="true" align="center" variant="h4">
-                            {nameCharacter}
+                            {this.state.name}
                         </Typography>
                     </CardContent>
                     <Grid container direction="row" justify="center" alignItems="center">
                         <Grid item xs={6}>
-                            <img src={urlImage} alt="" className="avatarBio" />
+                            <img src={this.state.image} alt="" className="selectImage selectImage-Two" />
                         </Grid>
                     </Grid>
                 </CardActionArea>
-
             </Grid>
 
         )
     }
 }
 
-export default CardSelect;
-
+export default SelectedItemTwo;
