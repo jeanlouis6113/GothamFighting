@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Media, Player } from 'react-media-player';
-import "./Video.css";
 
 class Video extends Component {
 
