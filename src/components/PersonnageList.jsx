@@ -10,6 +10,18 @@ import SelectedItemTwo from './SelectedItemTwo';
 
 function PersonnageList(props) {
   const [apiCharacters, setApiCharacters] = useState([]);
+  const [itemOne, setItemOne] = useState({
+    id: '',
+    name:'Select your champ',
+    image:'/images/pointMystere.jpg'
+  });
+  const [itemTwo, setItemTwo] = useState({
+    id: '',
+    name:'Select your opponent',
+    image:'/images/pointMystere.jpg'
+  });
+  
+
 
   async function fetchData() {
     for (let i = 0; i < characters.length; i++) {
@@ -42,21 +54,40 @@ function PersonnageList(props) {
     }
   }
 
+  function updatePlayerOne(idGiven, nameGiven, imageGiven) {
+    setItemOne({
+        id: idGiven,
+        name: nameGiven,
+        image: imageGiven
+    });
+  }
+  function updatePlayerTwo(idGiven, nameGiven, imageGiven) {
+    setItemTwo({
+        id: idGiven,
+        name: nameGiven,
+        image: imageGiven
+    });
+  }
+
+
   useEffect(() => {
     fetchData();
   },
     []
   );
 
+
+
+  
   return (
 
     <div className="CharacterList">
       <Grid container direction="row" alignItems="center">
         <Grid item md={6} sm={12}>
-          <SelectedItemOne />
+          <SelectedItemOne {...itemOne} />
         </Grid>
         <Grid item md={6} sm={12}>
-          <SelectedItemTwo />
+          <SelectedItemTwo {...itemTwo} />
         </Grid>
       </Grid>
 
@@ -68,10 +99,10 @@ function PersonnageList(props) {
             </Link>
             <Grid container justify="center">
               <Grid item xs={3} className="selectImage-One">
-                <button className="playerButton">Player 1</button>
+                <button className="playerButton"  onClick={() => updatePlayerOne(character.id, character.nameCharacter, character.urlImage)}>Player 1</button>
               </Grid>
               <Grid item xs={3} className="selectImage-Two">
-                <button className="playerButton">Player 2</button>
+                <button className="playerButton" onClick={() => updatePlayerTwo(character.id, character.nameCharacter, character.urlImage)} >Player 2</button>
               </Grid>
             </Grid>
           </Grid>
