@@ -2,10 +2,10 @@
 [
     {
         
-        "name": "Arkham",
+        "name": "arkham",
         "photo": {
             "src": "Arkham.jpg",
-            "alt": "Arkham"
+            "alt": "arkham"
         },
         "stats":{
             "stat1": "intelligence",
@@ -15,10 +15,10 @@
     },
    
     {
-        "name": "Batcave",
+        "name": "batcave",
         "photo": {
             "src": "Batcave.jpg",
-            "alt": "Batcave"
+            "alt": "batcave"
         },
         "stats":{
             "stat1": "strength",
@@ -28,10 +28,10 @@
         }
     },
     {
-        "name": "Egout",
+        "name": "egout",
         "photo": {
             "src": "Egout.jpg",
-            "alt": "Egout"
+            "alt": "egout"
         },
         "stats":{
             "stat1": "intelligence",
@@ -41,10 +41,10 @@
     },
    
     {
-        "name": "GothamPoliceStation",
+        "name": "gotham police station",
         "photo": {
             "src": "GothamPoliceStation.jpg",
-            "alt": "GothamPoliceStation"
+            "alt": "gothamPoliceStation"
         },
         "stats":{
             "stat1": "intelligence",
@@ -53,10 +53,10 @@
         }
     },
     {
-        "name": "WayneEnterprise",
+        "name": "wayne enterprise",
         "photo": {
             "src": "WayneEnterprise.jpg",
-            "alt": "WayneEnterprise"
+            "alt": "wayneEnterprise"
         },
         "stats":{
             "stat1": "strength",
@@ -66,10 +66,10 @@
     },
 
     {
-        "name": "WayneManor",
+        "name": "wayne manor",
         "photo": {
             "src": "WayneManor.jpg",
-            "alt": "WayneManor"
+            "alt": "wayneManor"
         },
         "stats":{
             "stat1": "intelligence",

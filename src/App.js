@@ -33,13 +33,13 @@ function App() {
           if (!res.ok) {
             throw new Error(res.status);
           } else {
-            console.log("ok");
+            // console.log("ok");
             return res.json();
           }
         })
         .then(
           (result) => {
-            console.log("result: ", result);
+            // console.log("result: ", result);
             if (result.image.url !== undefined) {
               const character = {
                 id: characters[i].id,
@@ -68,7 +68,7 @@ function App() {
       <Switch>
           <Route exact path="/" component={PageHome}/>
           <Route exact path="/PageBio" component={() => <PageBio setPersoOne={setPersoOne} persoOne={persoOne} setPersoTwo={setPersoTwo} persoTwo={persoTwo} apiCharacters={apiCharacters} />} />
-          <Route path="/PageCombat" component={() => <PageCombat idPersoOne={persoOne.id} idPersoTwo={persoTwo.id}/>} />
+          <Route path="/PageCombat" component={() => <PageCombat idPersoOne={persoOne/*.id*/} idPersoTwo={persoTwo/*.id*/}/>} />
           <Route path="/PageBio/characters/:characterId" component={PersonnageDetails} /> 
       </Switch>
       <Grid container item xs={5}>

@@ -11,7 +11,7 @@ export class pageBio extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <Grid container justify="space-between">
                     <Grid container item xs={1}>
                         <Logo />

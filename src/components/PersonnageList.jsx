@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
-import characters from './characters.json';
 import CardSelect from './CardSelect';
 import { Grid } from '@material-ui/core';
 import SelectedItemOne from './SelectedItemOne';

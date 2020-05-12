@@ -4,7 +4,6 @@ import Logo from './Logo';
 import ButtonSettings from './ButtonSettings';
 import Carrousel from './Carrousel'
 import ButtonBio from './ButtonBio';
-import ButtonPlay from './ButtonPlay';
 
 class PageHome extends React.Component {
     batSignal = () => {

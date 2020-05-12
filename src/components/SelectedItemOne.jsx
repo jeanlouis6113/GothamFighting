@@ -6,9 +6,9 @@ import { Grid } from '@material-ui/core';
 
 
 class SelectedItemOne extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         const { name, image } = this.props;
