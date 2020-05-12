@@ -27,6 +27,7 @@ export class PageCombat extends React.Component {
 
     render() {
         const {perso1, perso2} = this.state;
+        const {idPersoOne, idPersoTwo} = this.props;
         return (
             <div>
                 <Grid container justify="space-between">
@@ -39,7 +40,7 @@ export class PageCombat extends React.Component {
                 </Grid>
             <div className="couleur">
                 <h1>Page en construction</h1>
-                <Combat idPerso1={this.props.perso1} idPerso2={this.props.perso2}/> 
+                <Combat idPerso1={idPersoOne} idPerso2={idPersoTwo}/> 
                 {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
                 {perso2.stat1 !== "" && <p>{perso2.stat1}</p>}
             </div>

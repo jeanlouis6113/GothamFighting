@@ -9,89 +9,35 @@ import ButtonPlay from './ButtonPlay';
 
 
 
-function PersonnageList(props) {
-  const [apiCharacters, setApiCharacters] = useState([]);
-  const [itemOne, setItemOne] = useState({
-    id: '',
-    name:'Select your champ',
-    image:'/images/pointMystere.jpg'
-  });
-  const [itemTwo, setItemTwo] = useState({
-    id: '',
-    name:'Select your opponent',
-    image:'/images/pointMystere.jpg'
-  });
-  
-
-
-  async function fetchData() {
-    for (let i = 0; i < characters.length; i++) {
-      let url = `https://www.superheroapi.com/api.php/1109560066088421/${characters[i].id}`;
-      const res = await fetch(url)
-        .then(res => {
-          if (!res.ok) {
-            throw new Error(res.status);
-          } else {
-            console.log("ok");
-            return res.json();
-          }
-        })
-        .then(
-          (result) => {
-            console.log("result: ", result);
-            if (result.image.url !== undefined) {
-              const character = {
-                id: characters[i].id,
-                urlImage: result.image.url,
-                nameCharacter: result.name
-              };
-              setApiCharacters(oldArray => [...oldArray, character]);
-            }
-          }
-        )
-        .catch(error => {
-          console.log(error);
-        });
-    }
-  }
+function PersonnageList({persoOne, setPersoOne,persoTwo, setPersoTwo, apiCharacters}) {
 
   function updatePlayerOne(idGiven, nameGiven, imageGiven) {
-    setItemOne({
-        id: idGiven,
-        name: nameGiven,
-        image: imageGiven
-    });
+    setPersoOne({
+      id: idGiven,
+      name: nameGiven,
+      image: imageGiven
+  });
   }
   function updatePlayerTwo(idGiven, nameGiven, imageGiven) {
-    setItemTwo({
+    setPersoTwo({
         id: idGiven,
         name: nameGiven,
         image: imageGiven
     });
   }
 
-
-  useEffect(() => {
-    fetchData();
-  },
-    []
-  );
-
-
-
-  
   return (
 
     <div className="CharacterList">
       <Grid container direction="row" alignItems="center" justify="center">
         <Grid item md={5} sm={12}>
-          <SelectedItemOne {...itemOne} />
+          <SelectedItemOne {...persoOne} />
         </Grid>
         <Grid item md={2} sm={12}>
-          <ButtonPlay id1={itemOne.id} id2={itemTwo.id}/>
+          <ButtonPlay id1={persoOne.id} id2={persoTwo.id}/>
         </Grid>
         <Grid item md={5} sm={12}>
-          <SelectedItemTwo {...itemTwo} />
+          <SelectedItemTwo {...persoTwo} />
         </Grid>
       </Grid>
 

@@ -95,16 +95,21 @@ export function Combat(idPerso1, idPerso2) {
     perso2 = getPersoData(url2, stat1, stat2, stat3);
     console.table("Perso 2 Combat : ", perso2, idPerso2);
     
-    return (
-        // [perso1, perso2];
 
+    // algoTest = (ArenaName, perso1, perso2) => {
+    //     let cpt1 = 0;
+    //     let cpt2 = 0;
+
+    //     if (perso1.stat1)
+    // }
+
+
+    // return [perso1, perso2]
+return (
         <div>
             <p>
-                Test perso 1
-            </p>
-            <p>
-                Test perso 2
+                Test
             </p>
         </div>
-    );
+    )
 }
