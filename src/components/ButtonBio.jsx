@@ -7,7 +7,7 @@ class ButtonBio extends React.Component {
         return ( 
             <div className="wrapper-button">
                 <Link to="/PageBio">
-                    <p className="btn-homepage" data-text="bio">Bio</p>
+                    <p className="btn-homepage" data-text="Continue">Continue</p>
                 </Link>
             </div>
         );

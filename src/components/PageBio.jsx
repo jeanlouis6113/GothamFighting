@@ -11,7 +11,7 @@ export class pageBio extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <Grid container justify="space-between">
                     <Grid container item xs={1}>
                         <Logo />
@@ -20,7 +20,7 @@ export class pageBio extends React.Component {
                         <ButtonSettings />              
                     </Grid>
                 </Grid>
-                <PersonnageList character={this.props.character} />
+                <PersonnageList setPersoOne={this.props.setPersoOne} persoOne={this.props.persoOne} setPersoTwo={this.props.setPersoTwo} persoTwo={this.props.persoTwo} apiCharacters={this.props.apiCharacters} />
             </div>
         )
     }

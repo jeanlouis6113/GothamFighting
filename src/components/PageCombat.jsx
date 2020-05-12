@@ -2,15 +2,16 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Logo from './Logo';
 import ButtonSettings from './ButtonSettings';
-import {Combat} from './Combat';
+// import {Combat} from './Combat';
+import CombatTest from './CombatTest';
 
 export class PageCombat extends React.Component {
     state = {
-        perso1:{
+        perso1: {
             stat1: "",
             stat2: "",
             stat3: ""
-        } ,
+        },
         perso2: {
             stat1: "",
             stat2: "",
@@ -18,30 +19,19 @@ export class PageCombat extends React.Component {
         }
     }
 
-    componentDidMount() {
-        const results = Combat(70, 300);
-        // this.setState({perso1: results[0], perso2: results[1]});
-    }
+
 
     render() {
-        const {perso1, perso2} = this.state;
+        const { perso1, perso2 } = this.state;
+        const { idPersoOne, idPersoTwo } = this.props;
         return (
-            <div>
-                <Grid container justify="space-between">
-                    <Grid container item xs={1}>
-                        <Logo />
-                    </Grid>
-                    <Grid>
-                        <ButtonSettings />              
-                    </Grid>
+            <Grid container direction="row" alignItems="center" justify="center">
+                <Grid item xs={12} direction="row" alignItems="center" justify="center">
+                    <CombatTest idPerso1={idPersoOne} idPerso2={idPersoTwo} />
+                    {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
+                    {perso2.stat1 !== "" && <p>{perso2.stat1}</p>}
                 </Grid>
-            <div className="couleur">
-                <h1>Page en construction</h1>
-                {/* <Combat /> */}
-                {/* {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
-                {perso2.stat1 !== "" && <p>{perso2.stat1}</p>} */}
-            </div>
-            </div>
+            </Grid>
         )
     }
 }
