@@ -12,7 +12,6 @@ class SelectedItemOne extends Component {
 
     render() {
         const { name, image } = this.props;
-        console.log("Cards props: ", name, image);
         return (
             <Grid container direction="row" >
                 <CardActionArea>

@@ -5,6 +5,7 @@ import CardSelect from './CardSelect';
 import { Grid } from '@material-ui/core';
 import SelectedItemOne from './SelectedItemOne';
 import SelectedItemTwo from './SelectedItemTwo';
+import ButtonPlay from './ButtonPlay';
 
 
 
@@ -82,11 +83,14 @@ function PersonnageList(props) {
   return (
 
     <div className="CharacterList">
-      <Grid container direction="row" alignItems="center">
-        <Grid item md={6} sm={12}>
+      <Grid container direction="row" alignItems="center" justify="center">
+        <Grid item md={5} sm={12}>
           <SelectedItemOne {...itemOne} />
         </Grid>
-        <Grid item md={6} sm={12}>
+        <Grid item md={2} sm={12}>
+          <ButtonPlay id1={itemOne.id} id2={itemTwo.id}/>
+        </Grid>
+        <Grid item md={5} sm={12}>
           <SelectedItemTwo {...itemTwo} />
         </Grid>
       </Grid>

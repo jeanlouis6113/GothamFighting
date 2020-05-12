@@ -8,17 +8,11 @@ import { Grid } from '@material-ui/core';
 class SelectedItemTwo extends Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     id: '',
-        //     name:'Select your opponent',
-        //     image:'/images/pointMystere.jpg'
-        // };
     }
 
 
     render() {
         const { name, image } = this.props;
-        console.log("Cards props: ", name, image);
         return (
             <Grid container direction="row" >
                 <CardActionArea>

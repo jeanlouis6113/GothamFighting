@@ -39,9 +39,6 @@ class PageHome extends React.Component {
                         <Grid>
                         <ButtonBio />
                         </Grid>
-                        <Grid>
-                        <ButtonPlay />
-                        </Grid>
                     </Grid>
                     </Grid>
             </div>

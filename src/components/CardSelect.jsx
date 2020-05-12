@@ -14,20 +14,10 @@ class CardSelect extends Component {
         };
     }
 
-    onClickOne = () => {
-        alert('cacaboudin')
-    }
 
-    onClickTwo = () => {
-        alert('cacaboudin2')
-        // this.setState({
-        //     idTwo: 'truc',
-        // });
-    }
 
     render() {
         const { nameCharacter, urlImage } = this.props;
-        console.log("Cards props: ", nameCharacter, urlImage);
         return (
             <Grid container direction="row">
                 <CardActionArea>

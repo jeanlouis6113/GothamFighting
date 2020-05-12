@@ -6,12 +6,12 @@ import {Combat} from './Combat';
 
 export class PageCombat extends React.Component {
     state = {
-        perso1:{
+        perso1: {
             stat1: "",
             stat2: "",
             stat3: ""
         } ,
-        perso2: {
+        perso2: { 
             stat1: "",
             stat2: "",
             stat3: ""
@@ -19,8 +19,10 @@ export class PageCombat extends React.Component {
     }
 
     componentDidMount() {
-        const results = Combat(70, 300);
+        const results = Combat(this.props.perso1, this.props.perso2);
         // this.setState({perso1: results[0], perso2: results[1]});
+        console.log("Perso 1 pageCombat:", this.state.perso1);
+        console.log("Perso 2 pageCombat:", this.state.perso2)
     }
 
     render() {
@@ -37,9 +39,9 @@ export class PageCombat extends React.Component {
                 </Grid>
             <div className="couleur">
                 <h1>Page en construction</h1>
-                {/* <Combat /> */}
-                {/* {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
-                {perso2.stat1 !== "" && <p>{perso2.stat1}</p>} */}
+                <Combat idPerso1={this.props.perso1} idPerso2={this.props.perso2}/> 
+                {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
+                {perso2.stat1 !== "" && <p>{perso2.stat1}</p>}
             </div>
             </div>
         )

@@ -1,6 +1,10 @@
 import React from 'react';
 import Arenes from "./Arenes";
 import axios from 'axios';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
 
 
 
@@ -81,15 +85,26 @@ export function Combat(idPerso1, idPerso2) {
     const stat1 = idRandomSelect.stats.stat1;
     const stat2 = idRandomSelect.stats.stat2;
     const stat3 = idRandomSelect.stats.stat3;
- 
+
     const url = `https://www.superheroapi.com/api.php/108881107445202/${idPerso1}/powerstats`;
     const url2 = `https://www.superheroapi.com/api.php/108881107445202/${idPerso2}/powerstats`;
     // Use axios to get data from the url
     
     perso1 = getPersoData(url, stat1, stat2, stat3);
-    console.table(perso1);
+    console.table("Perso 1 Combat : ", perso1, idPerso1);
     perso2 = getPersoData(url2, stat1, stat2, stat3);
-    console.table(perso2);
+    console.table("Perso 2 Combat : ", perso2, idPerso2);
     
-    return [perso1, perso2];    
+    return (
+        // [perso1, perso2];
+
+        <div>
+            <p>
+                Test perso 1
+            </p>
+            <p>
+                Test perso 2
+            </p>
+        </div>
+    );
 }
