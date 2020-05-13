@@ -1,5 +1,15 @@
 /*GENERAL*/
+@font-face {
+  font-family: PoliceTxt;
+  src: url(./Font/Hero.otf) format("truetype");
+}
+@font-face {
+  font-family: PoliceTitre;
+  src: url(./Font/CovesLight.otf) format("truetype");
+}
+
 body {
+  font-family: PoliceTxt !important;
   max-width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,6 +25,7 @@ body {
 
 body a {
   text-decoration: none;
+  font-family: PoliceTxt !important;
 }
 
 code {
@@ -38,6 +49,14 @@ h4:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-linear-gradient(left, yellow, orange, yellow, red);
+}
+
+h2 {
+  font-family: PoliceTitre;
+}
+
+h4{
+  font-family: PoliceTxt  !important;
 }
 
 .text-center {
@@ -206,12 +225,14 @@ img {
   background-image: url("/images/arene/Arkham.jpg");
   background-size: 100% 100%;
   height: 100vh;
+
 }
 
 .batcave {
   background-image: url("/images/arene/Batcave.jpg");
   background-size: 100% 100%;
   height: 100vh;
+
 }
 
 .egout {
@@ -232,12 +253,24 @@ img {
   height: 100vh;
 } 
 
+
 .wayneManor {
   background-image: url("/images/arene/WayneManor.jpg");
   background-size: 100% 100%;
   height: 100vh;
 } 
 
+.winner {
+  color: lime;
+  text-shadow: 1px 1px 2px black;
+  font-family: PoliceTxt;
+}
+
+.loser {
+  color: red;
+  text-shadow: 1px 1px 2px black;
+  font-family: PoliceTxt;
+}
 
 /*style-arènes*/
 .large-div {
@@ -252,22 +285,29 @@ img {
   max-height: 70vh;
 }
 
+.fight-name {
+  font-size: 4.6vh !important;
+  font-family: PoliceTxt !important;
+}
+
 .fight-title {
+  font-family: PoliceTitre;
   text-transform: capitalize;
+  text-shadow: 1px white;
   margin-bottom: 0em;
-  font-size: 5vh;
-  margin-bottom: 6px;
-  background: linear-gradient(276deg, rgb(255, 255, 0), rgb(158, 180, 175));
+  font-size: 7vh;
+  background: linear-gradient(276deg, red, black, black, white, red);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: AnimationName 5s ease infinite;
-  animation: AnimationName 5s ease infinite;
+  -webkit-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 3s ease infinite;
 }
 
 .fight-status {
-  font-size: 2.1vh;
+  font-size: 3vh;
+  font-family: PoliceTxt !important;
 }
 
 /*BORDURES DEBUGG*/

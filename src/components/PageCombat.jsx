@@ -28,8 +28,8 @@ export class PageCombat extends React.Component {
             <Grid container direction="row" alignItems="center" justify="center">
                 <Grid item xs={12} direction="row" alignItems="center" justify="center">
                     <CombatTest idPerso1={idPersoOne} idPerso2={idPersoTwo} />
-                    {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
-                    {perso2.stat1 !== "" && <p>{perso2.stat1}</p>}
+                    {/* {perso1.stat1 !== "" && <p>{perso1.stat1}</p>}
+                    {perso2.stat1 !== "" && <p>{perso2.stat1}</p>} */}
                 </Grid>
             </Grid>
         )

@@ -5,9 +5,11 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
 import Logo from "./Logo";
 import ButtonSettings from "./ButtonSettings";
+// import { makeStyles } from '@material-ui/core/styles';
+// import Alert from '@material-ui/lab/Alert';
+
 
 
 function entierAleatoire(min, max) {
@@ -18,7 +20,9 @@ function entierAleatoire(min, max) {
 let perso1 = {};
 let perso2 = {};
 
+
 function CombatTest(props) {
+
 
     let randomiseur;
     let idRandomSelect;
@@ -56,8 +60,8 @@ function CombatTest(props) {
     loadPerso(props.idPerso1);
     loadPerso(props.idPerso2);
 
-    async function fight(idPlayer1, idPlayer2) {
 
+    async function fight(idPlayer1, idPlayer2) {
         const ArenaName = idRandomSelect.name;
         const stat1 = idRandomSelect.stats.stat1;
         const stat2 = idRandomSelect.stats.stat2;
@@ -114,15 +118,16 @@ function CombatTest(props) {
             const loser = props.idPerso2;
             setWinner(winner);
             setLoser(loser);
-
+            alert("You won you are justice!");
         } else {
             const winner = props.idPerso2;
             const loser = props.idPerso1;
             setWinner(winner);
             setLoser(loser);
+            alert("HA HA HA! Sore loser!")
         };
     }
-    // }
+    
 
     useEffect(() => {
         randomiseur = entierAleatoire(0, 5);
@@ -138,23 +143,23 @@ function CombatTest(props) {
     return (
             <Grid container direction="row" alignItems="center" justify="center" className={arena[1]}>
                 <Grid container xs={12} direction="row" alignItems="center" justify="space-between">
-                    <Grid item xs={6}>
+                    <Grid item xs={1}>
                         <Grid container item xs={1}>
                             <Logo className="logo-fight"/>
                         </Grid>
                     </Grid>
-                    <Grid item xs={0} className="button-fight">
+                    <Grid item xs={5} className="text-center">
+                        <h3 id="arena-name" className="fight-title text-center capitalize">{arena[0]}</h3>
+                    </Grid>
+                    <Grid item xs={0} alignItems="flex-end" justify="flex-end" className="button-fight">
                         <ButtonSettings />
                     </Grid>
                 </Grid>
 
-                <Grid item xs={12} className="text-center">
-                    <h3 id="arena-name" className="fight-title text-center capitalize">{arena[0]}</h3>
-                </Grid>
                 <Grid item xs={4} className="text-center">
                     <CardActionArea >
                         <CardContent>
-                            <Typography gutterBottom="true" align="center" variant="h4" className="text-center">
+                            <Typography gutterBottom="true" align="center" className="fight-name winner text-center">
                                 {winner.name}
                             </Typography>
                         </CardContent>
@@ -174,7 +179,7 @@ function CombatTest(props) {
                 <Grid xs={4} className="text-center">
                     <CardActionArea>
                         <CardContent className="avatarName">
-                            <Typography gutterBottom="true" align="center" variant="h4" className="text-center">
+                            <Typography gutterBottom="true" align="center" className="fight-name loser text-center">
                                 {loser.name}
                             </Typography>
                         </CardContent>
