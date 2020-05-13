@@ -1,8 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Logo from './Logo';
-import ButtonSettings from './ButtonSettings';
-// import {Combat} from './Combat';
+
+
 import CombatTest from './CombatTest';
 
 export class PageCombat extends React.Component {

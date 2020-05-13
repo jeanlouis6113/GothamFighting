@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import CardSelect from './CardSelect';
 import { Grid } from '@material-ui/core';
@@ -8,20 +8,20 @@ import ButtonPlay from './ButtonPlay';
 
 
 
-function PersonnageList({persoOne, setPersoOne,persoTwo, setPersoTwo, apiCharacters}) {
+function PersonnageList({ persoOne, setPersoOne, persoTwo, setPersoTwo, apiCharacters }) {
 
   function updatePlayerOne(idGiven, nameGiven, imageGiven) {
     setPersoOne({
       id: idGiven,
       name: nameGiven,
       image: imageGiven
-  });
+    });
   }
   function updatePlayerTwo(idGiven, nameGiven, imageGiven) {
     setPersoTwo({
-        id: idGiven,
-        name: nameGiven,
-        image: imageGiven
+      id: idGiven,
+      name: nameGiven,
+      image: imageGiven
     });
   }
 
@@ -33,7 +33,7 @@ function PersonnageList({persoOne, setPersoOne,persoTwo, setPersoTwo, apiCharact
           <SelectedItemOne {...persoOne} />
         </Grid>
         <Grid item md={2} sm={12}>
-          <ButtonPlay id1={persoOne.id} id2={persoTwo.id}/>
+          <ButtonPlay id1={persoOne.id} id2={persoTwo.id} />
         </Grid>
         <Grid item md={5} sm={12}>
           <SelectedItemTwo {...persoTwo} />
@@ -42,18 +42,21 @@ function PersonnageList({persoOne, setPersoOne,persoTwo, setPersoTwo, apiCharact
 
       <Grid container direction="row" justify="center" wrap="wrap" spacing={2}>
         {apiCharacters.map(character => (
-          <Grid item sm={11} md={5} lg={4} key={character.id} className="Character">
+          <Grid container justify="center" sm={11} md={5} lg={4} key={character.id} className="Character">
             <Link to={`/PageBio/characters/${character.id}`}>
               <CardSelect key={character.id} {...character} />
             </Link>
-            <Grid container justify="center">
-              <Grid item xs={3} className="selectImage-One">
-                <button className="playerButton"  onClick={() => updatePlayerOne(character.id, character.nameCharacter, character.urlImage)}>Player 1</button>
-              </Grid>
-              <Grid item xs={3} className="selectImage-Two">
-                <button className="playerButton" onClick={() => updatePlayerTwo(character.id, character.nameCharacter, character.urlImage)} >Player 2</button>
+            <Grid container justify="space-between" xs={5}>
+              <Grid container justify="space-between">
+                <Grid container xs={6} className="selectItem-One">
+                  <p className="playerButton selectItem-One" onClick={() => updatePlayerOne(character.id, character.nameCharacter, character.urlImage)}>Player 1</p>
+                </Grid>
+                <Grid container justify="flex-end" xs={6} className="selectItem-Two">
+                  <p className="playerButton selectItem-Two" onClick={() => updatePlayerTwo(character.id, character.nameCharacter, character.urlImage)} >Player 2</p>
+                </Grid>
               </Grid>
             </Grid>
+
           </Grid>
 
 

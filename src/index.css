@@ -55,8 +55,8 @@ h2 {
   font-family: PoliceTitre;
 }
 
-h4{
-  font-family: PoliceTxt  !important;
+h4 {
+  font-family: PoliceTxt !important;
 }
 
 .text-center {
@@ -98,20 +98,8 @@ img {
 }
 
 /*PAGE DETAILS*/
-.pageDetails {
-  width: 99vw;
-}
-
-.pageDetails h3 {
-  font-size: 2.3vh;
-}
-
-.pageDetails li {
-  font-size: 1.8vh;
-}
-
-.button-back {
-  height: 10vh;
+.short-space {
+  padding-top: -11em;
 }
 
 .wrapper-image {
@@ -175,14 +163,30 @@ img {
   min-height: 25vh;
   border-radius: 10%;
 }
+
 .playerButton {
-  width: 100%;
-  height: 3vh;
+  height: 2.5vh;
   border-radius: 10%;
+  font-family: PoliceTxt !important;
+  font-size: 1.8vh;
+  text-align: center;
+  border-style: solid;
+  width: 90%;
+  padding-top: 0.1em;
 }
 
+/*BOUTONS*/
+.selectItem-One {
+  border-color: yellow;
+}
+
+.selectItem-Two {
+  border-color: red;
+}
+
+/*CARTES*/
 .selectImage-One {
-  background: linear-gradient(276deg, yellow, black);
+  background: linear-gradient(276deg, yellow, yellow, rgb(158, 180, 175));
   background-size: 200% auto;
   border-style: solid;
   border-width: 5px;
@@ -210,6 +214,15 @@ img {
   animation: AnimationName 10s ease-in infinite;
 }
 
+/*CHART*/
+.caption {
+  font-size: 1.2em!important;
+  fill: black !important; 
+  font-weight: 700; 
+  text-shadow: none !important;
+}
+
+
 /*ARENA*/
 /*Background*/
 
@@ -225,14 +238,12 @@ img {
   background-image: url("/images/arene/Arkham.jpg");
   background-size: 100% 100%;
   height: 100vh;
-
 }
 
 .batcave {
   background-image: url("/images/arene/Batcave.jpg");
   background-size: 100% 100%;
   height: 100vh;
-
 }
 
 .egout {
@@ -245,20 +256,19 @@ img {
   background-image: url("/images/arene/GothamPoliceStation.jpg");
   background-size: 100% 100%;
   height: 100vh;
-} 
+}
 
 .wayneEnterprise {
   background-image: url("/images/arene/WayneEnterprise.jpg");
   background-size: 100% 100%;
   height: 100vh;
-} 
-
+}
 
 .wayneManor {
   background-image: url("/images/arene/WayneManor.jpg");
   background-size: 100% 100%;
   height: 100vh;
-} 
+}
 
 .winner {
   color: lime;
@@ -293,16 +303,14 @@ img {
 .fight-title {
   font-family: PoliceTitre;
   text-transform: capitalize;
-  text-shadow: 1px white;
-  margin-bottom: 0em;
   font-size: 7vh;
-  background: linear-gradient(276deg, red, black, black, white, red);
+  margin-bottom: 6px;
+  background: linear-gradient(yellow, orange, yellow, red);
+
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: AnimationName 4s ease infinite;
-  animation: AnimationName 3s ease infinite;
 }
 
 .fight-status {
@@ -341,3 +349,11 @@ img {
   border-color: lightblue;
 }
 
+.infoPerso {
+  background-color: rgba(255, 255, 255, 0.6);
+  /*opacity: 0.5;*/
+  color: black;
+  border: solid;
+  border-color: #f5e51b;
+  border-radius: 20px;
+}

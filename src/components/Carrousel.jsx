@@ -13,7 +13,7 @@ function Carrousel() {
             <AwesomeSlider animation="cubeAnimation" className="slider-homepage" >
                 <div>
                     <Link to='/PageBio/characters/370'>
-                        <img src="./images/theJokerCarrousel.webp" alt="The Joker"></img>
+                        <img src="./images/theJokerCarrousel.jpg" alt="The Joker"></img>
                     </Link>
                 </div>
                 <div>
@@ -28,8 +28,8 @@ function Carrousel() {
                     <Video className="masquer"/>
                 </div>
                 <div>
-                    <Link to='/PageBio/characters/514'>
-                        <img src="./images/thePenguinCarrousel.jpeg" alt="The Penguin"/>
+                    <Link to='/PageBio/characters/165'>
+                        <img src="./images/thePenguinCarrousel.jpg" alt="Catwoman"/>
                     </Link>
                 </div>
             </AwesomeSlider>

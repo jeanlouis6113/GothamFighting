@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import Logo from "./Logo";
 import ButtonSettings from "./ButtonSettings";
+import ButtonBio from "./ButtonBio";
 // import { makeStyles } from '@material-ui/core/styles';
 // import Alert from '@material-ui/lab/Alert';
 
@@ -174,6 +175,7 @@ function CombatTest(props) {
 
                 <Grid xs={2} className="text-center">
                     <img src="https://cuiseur-sous-vide.fr/wp-content/uploads/2019/01/vs-logo-1024x875.png" />
+                    <ButtonBio />
                 </Grid>
 
                 <Grid xs={4} className="text-center">

@@ -19,7 +19,7 @@ function App() {
   });
   const [persoTwo, setPersoTwo] = useState({
     id: '',
-    name:'Select your champ',
+    name:'Select your opponent',
     image:'/images/pointMystere.jpg'
   });
 
