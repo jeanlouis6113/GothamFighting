@@ -155,7 +155,11 @@ img {
 
 .short-description {
   font-size: 2.5vh;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+.sous-description {
+  font-size: 2vh;
+  text-align: center;
 }
 /*PAGE PERSONNAGELIST*/
 .selectImage {
@@ -180,8 +184,16 @@ img {
   border-color: yellow;
 }
 
+.selectItem-One:hover {
+  cursor: pointer;
+}
+
 .selectItem-Two {
   border-color: red;
+}
+
+.selectItem-Two {
+  cursor: pointer;
 }
 
 /*CARTES*/

@@ -8,10 +8,17 @@ import { Grid } from '@material-ui/core';
 import Logo from "./Logo";
 import ButtonSettings from "./ButtonSettings";
 import ButtonBio from "./ButtonBio";
-// import { makeStyles } from '@material-ui/core/styles';
-// import Alert from '@material-ui/lab/Alert';
+//import { makeStyles } from '@material-ui/core/styles';
+//import Alert from '@material-ui/lab/Alert';
 
-
+/*const useStyles = makeStyles((theme) => ({
+    root: {
+      width: '100%',
+      '& > * + *': {
+        marginTop: theme.spacing(2),
+      },
+    },
+  }));*/
 
 function entierAleatoire(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -119,13 +126,13 @@ function CombatTest(props) {
             const loser = props.idPerso2;
             setWinner(winner);
             setLoser(loser);
-            alert("You won you are justice!");
+            const txtAlert ="You won you are justice!";
         } else {
             const winner = props.idPerso2;
             const loser = props.idPerso1;
             setWinner(winner);
             setLoser(loser);
-            alert("HA HA HA! Sore loser!")
+            const txtAlert="HA HA HA! Sore loser!";
         };
     }
     
@@ -192,6 +199,7 @@ function CombatTest(props) {
                             </Grid>
                         </Grid>
                     </CardActionArea>
+                  {/*  <Alert severity="info">This is an info alert — check it out!</Alert> */}
                 </Grid>
             </Grid>
     )
