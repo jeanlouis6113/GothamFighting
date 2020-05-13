@@ -11,7 +11,6 @@
 body {
   font-family: PoliceTxt !important;
   max-width: 100%;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -186,35 +185,52 @@ img {
 
 .selectItem-One:hover {
   cursor: pointer;
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
 }
 
 .selectItem-Two {
   border-color: red;
 }
 
-.selectItem-Two {
+.selectItem-Two:hover {
   cursor: pointer;
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
 }
 
 /*CARTES*/
 .selectImage-One {
-  background: linear-gradient(276deg, yellow, yellow, rgb(158, 180, 175));
+  object-fit: cover;
+  min-width: 35%;
+  background: linear-gradient(
+    276deg, 
+rgb(179, 179, 65),
+rgb(255, 255, 0),
+rgb(158, 180, 175), 
+rgb(255, 255, 0), 
+rgb(179, 179, 65)
+);
   background-size: 200% auto;
   border-style: solid;
   border-width: 5px;
   border-color: transparent;
   background-clip: border-box;
   -webkit-background-clip: border-box;
-  -webkit-animation: AnimationName 10s ease-in infinite;
-  animation: AnimationName 10s ease-in infinite;
+  -webkit-animation: AnimationName 6s ease-in infinite;
+  animation: AnimationName 6s ease-in infinite;
 }
 
 .selectImage-Two {
+  min-width: 35%;
+  object-fit: cover;
   background: linear-gradient(
     276deg,
-    red,
+    rgb(87, 14, 14),
     rgb(185, 40, 40),
-    rgb(158, 180, 175)
+    rgb(158, 180, 175),
+    rgb(185, 40, 40),
+    rgb(87, 14, 14)
   );
   background-size: 200% auto;
   border-style: solid;
@@ -222,8 +238,8 @@ img {
   border-color: transparent;
   background-clip: border-box;
   -webkit-background-clip: border-box;
-  -webkit-animation: AnimationName 10s ease-in infinite;
-  animation: AnimationName 10s ease-in infinite;
+  -webkit-animation: AnimationName 6s ease-in infinite;
+  animation: AnimationName 6s ease-in infinite;
 }
 
 /*CHART*/
@@ -292,6 +308,25 @@ img {
   color: red;
   text-shadow: 1px 1px 2px black;
   font-family: PoliceTxt;
+}
+
+.stat-wrapper {
+  height: 45px;
+  width: 45px;
+}
+
+.stat-fight {
+  max-width: 40px !important;
+  object-fit: cover !important;
+  border-style: solid;
+  background-color: white;
+  border-color: yellow;
+  border-radius: 8%;
+}
+
+.stat-fight:hover {
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
 }
 
 /*style-arènes*/
@@ -369,3 +404,8 @@ img {
   border-color: #f5e51b;
   border-radius: 20px;
 }
+
+.alertDisplay {
+  text-transform: none;
+}
+

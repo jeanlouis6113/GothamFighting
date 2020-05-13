@@ -8,6 +8,10 @@ import './FloatingImage.scss';
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css';
 
+const defaultOptions = {
+    captionMargin: 40
+};
+
 class PersonnageDetails extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +63,7 @@ class PersonnageDetails extends Component {
 
             <div className="pageDetails">
                 <Grid container justify="space-between">
-                    <Grid container item xs={1}>
+                    <Grid container item sm={1} md={1} lg={1}>
                         <Logo />
                     </Grid>
                     <Grid>
@@ -68,18 +72,18 @@ class PersonnageDetails extends Component {
                 </Grid>
 
                 <Grid container direction="row" justify="center" alignItems="center">
-                    <Grid item xs={12} className="short-space">
+                    <Grid item xsm={12} md={12} lg={12} className="short-space">
                         <h2 id="character-name" class="text-center">{character.name}</h2>
                     </Grid>
-                    <Grid item xs={12} class="text-center">
+                    <Grid item sm={12} md={12} lg={12} class="text-center">
                         <p class="short-description">The character {character.name} is the hidden identity of {character.biography["full-name"]}.</p>
                     </Grid>
                 </Grid>
 
                 <Grid container direction="row" justify="center" alignItems="flex-start" className="infoPerso">
-                        <Grid item xs={5}>
+                        <Grid item sm={12} md={12} lg={5}>
                             <Grid container direction="row" alignItems="flex-start" justify="space-between">
-                                <Grid item xs={5} >
+                                <Grid item sm={6} md={6} lg={5} >
                                     <h3>Identity</h3>
                                     <ul>
                                         <li>Place of Birth: {character.biography["place-of-birth"]}</li>
@@ -90,7 +94,7 @@ class PersonnageDetails extends Component {
                                     </ul>
                                 </Grid>
 
-                                <Grid item xs={5} >
+                                <Grid item sm={6} md={6} lg={5} >
                                     <h3>Appearance</h3>
                                     <ul>
                                         <li>Height: {`${character.appearance.height}`}</li>
@@ -101,7 +105,7 @@ class PersonnageDetails extends Component {
                                 </Grid>
 
                                 <Grid container >
-                                    <Grid item xs={12}>
+                                    <Grid item sm={6} md={6} lg={10}>
                                         <h3>Work</h3>
                                         <ul>
                                             <li>Occupation: {character.work.occupation}</li>
@@ -109,7 +113,7 @@ class PersonnageDetails extends Component {
                                         </ul>
                                     </Grid>
 
-                                    <Grid item xs={12}>
+                                    <Grid item sm={6} md={6} lg={10}>
                                         <h3>Connections</h3>
                                         <ul>
                                             <li>Group Affiliation: {character.connections["group-affiliation"]}</li>
@@ -120,24 +124,19 @@ class PersonnageDetails extends Component {
                             </Grid>
                         </Grid>
 
-                        <Grid item xs={4}>
+                        <Grid item sm={12} md={12} lg={4}>
                             <Grid container direction="column" alignItems="center" justify="flex-start" >
                                 <Grid item>
                                     <h3 >Powerstats</h3>
                                 </Grid>
 
-                                <Grid item >
-                                    {/* <p>Intelligence: {character.powerstats.intelligence}</p>
-                                <p>Strength: {character.powerstats.strength}</p>
-                                <p>Speed: {character.powerstats.speed}</p>
-                                <p>Durability: {character.powerstats.durability}</p>
-                                <p>Power: {character.powerstats.power}</p>
-                                <p>Combat: {character.powerstats.combat}</p> */}
+                                <Grid item sm={12} md={12} lg={12} >
 
-                                    <RadarChart className="infoPerso"
+                                    <RadarChart className="infoPerso"  
                                         captions={{
                                             // columns
-                                            intelligence: `Intelligence: ${dataIntelligence}`,
+                                            intelligence: `Intelligence:
+                                            ${dataIntelligence}`,
                                             strength: `Strength: ${dataStrength}`,
                                             power: `Power ${dataPower}`,
                                             combat: `Combat ${dataCombat}`,
@@ -157,13 +156,13 @@ class PersonnageDetails extends Component {
                                                 meta: { color: '#f5e51b' }
                                             }
                                         ]}
-                                        size={550}
+                                        options={defaultOptions}
                                     />
                                 </Grid>
                             </Grid>
                         </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item sm={12} md={6} lg={3}>
                         <Grid container direction="column" alignContent="center" justify="center" className="  wrapper-image">
                             <Grid item xs={10} className="floating-box animated-background">
                                 <img src={character.image.url} alt={character.name} />
