@@ -28,7 +28,7 @@ class ButtonSettings extends React.Component {
     render() { 
         return ( 
             <div className="settingsIcon" onClick={this.handleClick}>
-                <img id="settingsIcon" src={this.state.isToggleOn ? './images/speakerOn.png' : './images/speakerOff.png'} alt="Settings Button"/>
+                <img id="settingsIcon" src={this.state.isToggleOn ? '/images/speakerOn.png' : '/images/speakerOff.png'} alt="Settings Button"/>
             </div>
         );
     }

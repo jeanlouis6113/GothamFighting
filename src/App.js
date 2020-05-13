@@ -19,7 +19,7 @@ function App() {
   });
   const [persoTwo, setPersoTwo] = useState({
     id: '',
-    name:'Select your champ',
+    name:'Select your opponent',
     image:'/images/pointMystere.jpg'
   });
 
@@ -68,7 +68,7 @@ function App() {
       <Switch>
           <Route exact path="/" component={PageHome}/>
           <Route exact path="/PageBio" component={() => <PageBio setPersoOne={setPersoOne} persoOne={persoOne} setPersoTwo={setPersoTwo} persoTwo={persoTwo} apiCharacters={apiCharacters} />} />
-          <Route path="/PageCombat" component={() => <PageCombat idPersoOne={persoOne/*.id*/} idPersoTwo={persoTwo/*.id*/}/>} />
+          <Route path="/PageCombat" component={() => <PageCombat idPersoOne={persoOne} idPersoTwo={persoTwo}/>} />
           <Route path="/PageBio/characters/:characterId" component={PersonnageDetails} /> 
       </Switch>
       <Grid container item xs={5}>

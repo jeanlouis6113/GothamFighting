@@ -29,7 +29,8 @@ class PageHome extends React.Component {
                         <Grid item xs={9}>
                         <h1 onClick={this.batSignal}>Gotham Fighting</h1>
                         </Grid>
-                        <Grid item xs={9}>
+                        <Grid item xs={9} >
+                            <p class="sous-description" >Welcome to Gotham Fighting, in this application you will have the possiblity to check the information of a character by clicking on it's picture, or you can select two heroes in order to make them fight on a random arena.<br/> Now click on "continue" and enjoy !</p>
                         <Carrousel />
                         </Grid>
                     </Grid>
