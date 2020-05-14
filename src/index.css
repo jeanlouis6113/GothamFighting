@@ -10,7 +10,7 @@
 
 body {
   font-family: PoliceTxt !important;
-  max-width: 100%;
+  /* max-width:100% ; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -268,38 +268,43 @@ rgb(179, 179, 65)
 .arkham {
   background-image: url("/images/arene/Arkham.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh;
   background-attachment: fixed;
 }
 
 .batcave {
   background-image: url("/images/arene/Batcave.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh;
+  background-attachment: fixed;
 }
 
 .egout {
   background-image: url("/images/arene/Egout.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh;
+  background-attachment: fixed;
 }
 
 .gothamPoliceStation {
   background-image: url("/images/arene/GothamPoliceStation.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh;
+  background-attachment: fixed; 
 }
 
 .wayneEnterprise {
   background-image: url("/images/arene/WayneEnterprise.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh;
+  background-attachment: fixed; 
 }
 
 .wayneManor {
   background-image: url("/images/arene/WayneManor.jpg");
   background-size: 100% 100%;
-  height: 100vh;
+  height: 120vh; 
+  background-attachment: fixed; 
 }
 
 .winner {
@@ -419,6 +424,8 @@ rgb(179, 179, 65)
 
 
 
+
+
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
   
@@ -439,6 +446,10 @@ rgb(179, 179, 65)
 }
 
 @media only screen and (max-width: 770px) {
+  .imageVs{
+    width: 20em;
+  }
+
   .arkham {
     background-image: url("/images/arene/Arkham.jpg");
     background-size: cover;
@@ -451,7 +462,7 @@ rgb(179, 179, 65)
   .batcave {
     background-image: url("/images/arene/Batcave.jpg");
     background-size: cover;
-    height: 300vh;
+    height: 250vh;
     background-attachment: fixed;
     background-position: center;
     object-fit: cover;
@@ -460,7 +471,7 @@ rgb(179, 179, 65)
   .egout {
     background-image: url("/images/arene/Egout.jpg");
     background-size: cover;
-    height: 300vh;
+    height: 250vh;
     background-attachment: fixed;
     background-position: center;
     object-fit: cover;
@@ -469,7 +480,8 @@ rgb(179, 179, 65)
   .gothamPoliceStation {
     background-image: url("/images/arene/GothamPoliceStation.jpg");
     background-size: cover;
-    height: 300vh;
+    width: auto;
+    height: 250vh;
     background-attachment: fixed;
     background-position: center;
     object-fit: cover;
@@ -478,7 +490,7 @@ rgb(179, 179, 65)
   .wayneEnterprise {
     background-image: url("/images/arene/WayneEnterprise.jpg");
     background-size: cover;
-    height: 300vh;
+    height: 250vh;
     background-attachment: fixed;
     background-position: center;
     object-fit: cover;
@@ -487,7 +499,7 @@ rgb(179, 179, 65)
   .wayneManor {
     background-image: url("/images/arene/WayneManor.jpg");
     background-size: cover;
-    height: 300vh;
+    height: 250vh;
     background-attachment: fixed;
     background-position: center;
     object-fit: cover;

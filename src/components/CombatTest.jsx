@@ -209,7 +209,7 @@ function CombatTest(props) {
             </Grid>
 
             <Grid md={2} lg={2} className="text-center">
-                <img src="./images/vsLogo.png" alt="VS" />
+                <img src="./images/vsLogo.png" alt="VS" className="imageVs"/>
                 <ButtonBio />
 
                 <Grid container justify="center">

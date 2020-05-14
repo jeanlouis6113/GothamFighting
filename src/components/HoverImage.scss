@@ -1,82 +1,96 @@
-*
-	/*box-sizing: border-box
-
-body, html
-	width: 100%
-	height: 100%
-	display: flex
-	align-items: center
-	justify-content: center
-	background: orange
-
-.wrapper
+/*.wrapper
 	display: flex
 	width: 90%
-	justify-content: space-around
+    justify-content: space-around*/
+    // max-width: 100%;
+    // border-radius: 10%;
+    // max-height: 309.351px;
+    
+    .cardSelected {
+	width: 100%;
+	//height: 509.351px;
+	border-radius: 15px;
+	//padding: 1.5rem;
+	background: transparent;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	transition: 0.4s ease-out;
+    // box-shadow: 0px 7px 10px rgba(black, 0.5)
+    }
 
-.cardselected
-	width: 280px
-	height: 360px
-	border-radius: 15px
-	padding: 1.5rem
-	background: white
-	position: relative
-	display: flex
-	align-items: flex-end
-	transition: 0.4s ease-out
-	box-shadow: 0px 7px 10px rgba(black, 0.5)
-	&:hover
-		transform: translateY(10px)
-		&:before
-			opacity: 1
-		.infocard
-			opacity: 1
-			transform: translateY(0px)
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		display: block
-		width: 100%
-		height: 100%
-		border-radius: 15px
-		background: rgba(black, 0.6)
-		z-index: 2
-		transition: 0.5s
-		opacity: 0
-	img
-		width: 100%
-		height: 100%
-		object-fit: cover
-		position: absolute
-		top: 0
-		left: 0
-		border-radius: 15px
+    .cardSelected:hover{
+        transform: translateY(10px);
+		&:before {
+            opacity: 1;
+        }
+		.infocard {
+			opacity: 1;
+            transform: translateY(0px);
+        }
+    }
 
-	.infocard
-		position: relative
-		z-index: 3
-		color: white
-		opacity: 0
-		transform: translateY(30px)
-		transition: 0.5s
-		h1
-			margin: 0px
-		p
-			letter-spacing: 1px
-			font-size: 15px
-			margin-top: 8px
-		button
-			padding: 0.6rem
-			outline: none
-			border: none
-			border-radius: 3px
-			background: white
-			color: black
-			font-weight: bold
-			cursor: pointer
-			transition: 0.4s ease
-			&:hover
-				background: dodgerblue
-				color: white
+	.cardSelected:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background: rgba(black, 0.6);
+		z-index: 2;
+		transition: 0.5s;
+        opacity: 0;
+    }
+
+	.imgBizzare {
+        background-position: bottom;
+		width: 100%;
+		height: 100%;
+		//object-fit: content;
+		position: relative;
+		top: 0;
+		left: 0;
+		border-radius: 15px;
+    }
+
+	.infocard {
+		position: absolute;
+		z-index: 2;
+		color:white;
+		opacity: 0;
+		transform: translateY(30px);
+        transition: 0.5s;
+        // display: none;
+    }
+    
+    .infocard h1 {
+        margin: 0px;
+        text-align: center;
+    }
+    
+    .infocard p {
+			letter-spacing: 1px;
+			font-size: 15px;
+            margin-top: 8px;
+    }
+    
+    .infocard button {
+			padding: 0.6rem;
+			outline: none;
+			border: none;
+			border-radius: 40%;
+			background: white;
+			color: black;
+			font-weight: bold;
+			cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+    .infocard button:hover{
+        border-style: solid;        
+        border-color: black;
+        color: black;
+    }
