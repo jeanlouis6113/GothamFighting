@@ -6,7 +6,7 @@ export class Logo extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="wrapper-logo">
                  <Link to="/"><img src='/images/logoGotham.svg' alt="Logo Gotham" className="logo-direct"/></Link>
             </div>
         )

@@ -12,7 +12,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 import IconButton from '@material-ui/core/IconButton';
 import Collapse from '@material-ui/core/Collapse';
-import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -40,17 +39,15 @@ function CombatTest(props) {
 
     let randomiseur;
     let idRandomSelect;
-    let debutUrl;
     let urlim;
     const classes = useStyles();
     const [winner, setWinner] = useState({});
     const [loser, setLoser] = useState({});
     const [arena, setArena] = useState([]);
     const [txtAlert, setTxtAlert] = useState([]);
-    const [colorAlert, setColorAlert] = useState([]);
     const [open, setOpen] = React.useState(true);
 
-    async function getPersoData(url, stat1, stat2, stat3) {
+    /*async function getPersoData(url, stat1, stat2, stat3) {
         const res = await axios.get(url)
             .then(response => response.data)
             .then(data => {
@@ -76,7 +73,7 @@ function CombatTest(props) {
     }
 
     loadPerso(props.idPerso1);
-    loadPerso(props.idPerso2);
+    loadPerso(props.idPerso2);*/
 
 
     async function fight(idPlayer1, idPlayer2) {
@@ -138,20 +135,16 @@ function CombatTest(props) {
             const winner = props.idPerso1;
             const loser = props.idPerso2;
             const txtAlert = "You won you are justice!";
-            const colorAlert = "success";
             setWinner(winner);
             setLoser(loser);
             setTxtAlert(txtAlert);
-            setColorAlert(colorAlert);
         } else {
             const winner = props.idPerso2;
             const loser = props.idPerso1;
             const txtAlert = "HA HA HA! Sore loser!";
-            const colorAlert = "warning";
             setWinner(winner);
             setLoser(loser);
             setTxtAlert(txtAlert);
-            setColorAlert(colorAlert);
             ;
         };
     }
@@ -159,7 +152,6 @@ function CombatTest(props) {
     useEffect(() => {
         randomiseur = entierAleatoire(0, 5);
         idRandomSelect = Arenes[randomiseur];
-        debutUrl = "./images/arene/";
         urlim = idRandomSelect.photo.alt;
         fight(props.idPerso1.id, props.idPerso2.id);
     }, []);
@@ -186,21 +178,21 @@ function CombatTest(props) {
                     </Alert>
                 </Collapse>
             </div>
-            <Grid container xs={12} direction="row" alignItems="center" justify="space-between">
-                <Grid item xs={1}>
-                    <Grid container item xs={1}>
-                        <Logo className="logo-fight" />
+            <Grid container sm={12} md={12} lg={12} direction="row" alignItems="center" justify="space-between">
+                <Grid item sm={1} md={1} lg={1}>
+                    <Grid container item sm={1} md={1} lg={1} className="logo-fight">
+                        <Logo />
                     </Grid>
                 </Grid>
-                <Grid item xs={5} className="text-center">
+                <Grid item sm={9} md={5} lg={5} className="text-center">
                     <h3 id="arena-name" className="fight-title text-center capitalize">{arena[0]}</h3>
                 </Grid>
-                <Grid item xs={0} alignItems="flex-end" justify="flex-end" className="button-fight">
+                <Grid item sm={1} md={0} lg={0} alignItems="flex-end" justify="flex-end" className="button-fight">
                     <ButtonSettings />
                 </Grid>
             </Grid>
 
-            <Grid item xs={4} className="text-center">
+            <Grid item sm={10} md={4} lg={4} className="text-center">
                 <CardActionArea >
                     <CardContent>
                         <Typography gutterBottom="true" align="center" className="fight-name winner text-center">
@@ -208,7 +200,7 @@ function CombatTest(props) {
                         </Typography>
                     </CardContent>
                     <Grid container direction="row" justify="center" alignItems="center">
-                        <Grid item xs={12}>
+                        <Grid item sm={10} md={12} lg={12}>
                             <img src={winner.image} alt="" className="avatarCombat" />
                             <h4 className="winner fight-status">Winner</h4>
                         </Grid>
@@ -216,32 +208,32 @@ function CombatTest(props) {
                 </CardActionArea>
             </Grid>
 
-            <Grid xs={2} className="text-center">
-                <img src="./images/vsLogo.png" />
+            <Grid md={2} lg={2} className="text-center">
+                <img src="./images/vsLogo.png" alt="VS" />
                 <ButtonBio />
 
                 <Grid container justify="center">
-                    <Grid item xs={3} className="stat-wrapper">
+                    <Grid item md={3} lg={3} className="stat-wrapper">
                         <Tooltip title={arena[5]} placement="bottom">
-                            <img className="stat-fight" src={arena[2]} />
+                            <img className="stat-fight" src={arena[2]} alt="stat1" />
                         </Tooltip>
                     </Grid>
 
-                    <Grid item xs={3} className="stat-wrapper">
+                    <Grid item md={3} lg={3} className="stat-wrapper">
                         <Tooltip title={arena[6]} placement="bottom">
-                            <img className="stat-fight" src={arena[3]} />
+                            <img className="stat-fight" src={arena[3]} alt="stat2" />
                         </Tooltip>
                     </Grid>
 
-                    <Grid item xs={3} className="stat-wrapper">
+                    <Grid item md={3} lg={3} className="stat-wrapper">
                         <Tooltip title={arena[7]} placement="bottom">
-                            <img className="stat-fight" src={arena[4]} />
+                            <img className="stat-fight" src={arena[4]} alt="stat3" />
                         </Tooltip>
                     </Grid>
                 </Grid>
             </Grid>
 
-            <Grid xs={4} className="text-center">
+            <Grid md={4} lg={4} className="text-center">
                 <CardActionArea>
                     <CardContent className="avatarName">
                         <Typography gutterBottom="true" align="center" className="fight-name loser text-center">
@@ -249,8 +241,8 @@ function CombatTest(props) {
                         </Typography>
                     </CardContent>
                     <Grid container direction="row" justify="center" alignItems="center">
-                        <Grid item xs={12}>
-                            <img src={loser.image} alt="" className="avatarCombat" />
+                        <Grid item md={12} lg={12}>
+                            <img src={loser.image} alt="" className="avatarCombat" id="imgLoser" />
                             <h4 className="loser fight-status text-center">Loser</h4>
                         </Grid>
                     </Grid>
