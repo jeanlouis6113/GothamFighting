@@ -57,7 +57,7 @@ class PersonnageDetails extends Component {
         const dataPower = Number(character.powerstats.power) / 100;
         const dataCombat = Number(character.powerstats.combat) / 100;
         const dataSpeed = Number(character.powerstats.speed) / 100;
-        const dataDurability = Number(character.powerstats.durability) / 100;
+        const dataDurability = parseInt(character.powerstats.durability, 10) / 100;
 
         return (
 
@@ -133,12 +133,12 @@ class PersonnageDetails extends Component {
                                     <RadarChart className="infoPerso"
                                         captions={{
                                             // columns
-                                            intelligence: `Intelligence: ${dataIntelligence*100}`,
-                                            strength: `Strength: ${dataStrength*100}`,
-                                            power: `Power ${dataPower*100}`,
-                                            combat: `Combat ${dataCombat*100}`,
-                                            speed: `Speed ${dataSpeed*100}`,
-                                            durability: `Durability ${dataDurability*100}`
+                                            intelligence: `Intelligence: ${Math.round(dataIntelligence*100)}`,
+                                            strength: `Strength: ${Math.round(dataStrength*100)}`,
+                                            power: `Power ${Math.round(dataPower*100)}`,
+                                            combat: `Combat ${Math.round(dataCombat*100)}`,
+                                            speed: `Speed ${Math.round(dataSpeed*100)}`,
+                                            durability: `Durability ${Math.round(dataDurability*100)}`
                                         }}
                                         data={[
                                             {

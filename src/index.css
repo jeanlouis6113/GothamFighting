@@ -325,7 +325,8 @@ rgb(179, 179, 65)
 }
 
 .stat-fight {
-  max-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
   object-fit: cover !important;
   border-style: solid;
   background-color: white;
@@ -405,6 +406,13 @@ rgb(179, 179, 65)
   border-color: lightblue;
 }
 /*page Combat/CombatTest*/
+body {
+  margin: 0;
+
+  /* border: 5px solid Yellow; */
+  border-radius: 1%;
+}
+
 .infoPerso {
   background-color: rgba(255, 255, 255, 0.6);
   /*opacity: 0.5;*/
@@ -436,6 +444,7 @@ rgb(179, 179, 65)
   #arena-name{
     font-size: 1.3em;
   }
+
 }
 
 @media only screen and (min-width: 1015px) and (max-width: 1100px) {
