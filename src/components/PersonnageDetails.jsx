@@ -57,7 +57,7 @@ class PersonnageDetails extends Component {
         const dataPower = Number(character.powerstats.power) / 100;
         const dataCombat = Number(character.powerstats.combat) / 100;
         const dataSpeed = Number(character.powerstats.speed) / 100;
-        const dataDurability = parseInt(character.powerstats.durability, 10) / 100;
+        const dataDurability = Number(character.powerstats.durability) / 100;
 
         return (
 
