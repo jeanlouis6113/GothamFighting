@@ -1,0 +1,101 @@
+$bg-color: black;
+$bg-img: url("https://thumbs.gfycat.com/FluffyValidArgusfish-size_restricted.gif");
+
+[class*="btn-"] {
+	outline:0;
+	border-radius: 50px;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 4px;
+	overflow: hidden;
+	position: relative; //absolute
+	padding: 2em 3em;
+	margin: 4em;
+	text-transform: uppercase;
+	-webkit-tap-highlight-color: transparent;
+	transition: all 500ms ease-in-out;
+	&::after, &::before { 
+    	content: "";
+    	position: absolute;
+	}
+	&:hover, &:focus {
+		background: rgba(245, 229, 27, 1);
+		cursor: pointer;
+	}
+}
+
+[class*="btn-homepage"] {
+	&::after {
+		background: $bg-color;
+		background-image: $bg-img;
+		border-radius: 120px;
+		content: attr(data-text);
+		color: rgba(255, 255, 255, 0.8);
+		padding: 1.6em 2.5em;
+		top: 0.4em;
+		left: 0.5em;
+		-moz-user-select: none;
+	}
+	&::before {
+		background: transparent;
+		border-radius: 100%;
+		top: 50%;
+		left: 50%;
+		box-shadow: 0 1em 2em 3em rgba(231, 183, 26, 0.5),
+					4em 0em 2em 2em rgba(152, 136, 41, 0.6),
+					-4em -2em 2em 2em rgba(245, 229, 27, 1),
+					-4em 2em 2em 4em rgba(40, 46, 60, 0.5),
+					0 -3em 2em 3em rgba(80, 92, 124, 0.5),
+					2em -1em 2em 2em rgba(244, 208, 63, 1);
+		width: 0;
+		height: 0;
+		animation: homepage 5s linear infinite;
+	}
+}
+
+@keyframes homepage {
+
+	30% {
+    box-shadow: 0 -1em 2em 3em rgba(251, 196, 3, 0.5),
+                4em -1em 2em 3em rgba(80, 92, 124, 0.5),
+                -4em 2em 3em 2em rgba(40, 46, 60, 0.5),
+                -4em -2em 2em 2em rgba(152, 136, 41, 0.6),
+                0 3em 2em 2em rgba(21, 21, 21, 0.5),
+                2em 1em 2em 2em rgba(50, 210, 250, 0.5);
+	}
+
+	60% {
+    box-shadow: 2em 1em 2em 3em rgba(240, 240, 214, 1),
+                3em 1em 2em 3em rgba(40, 46, 60, 0.5),
+                3em -2em 3em 3em rgba(155, 200, 0, 0.5),
+                -4em 2em 2em 3em rgba(253, 255, 0, 0.5),
+                0 -3em 2em 3em rgba(200, 250, 0, 0.5),
+                -2em 1em 2em 3em rgba(50, 210, 250, 0.6);
+	}
+
+}
+
+.btn-homepage-noborder {
+	&::after {
+		background: transparent !important;
+		color: $bg-color !important;
+	}
+}
+
+.btn-homepage-noRadius {
+	border-radius: 0 !important;
+	&::after, &::before {
+    	border-radius: 0 !important;
+	}
+}
+
+.wrapper-button {
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}

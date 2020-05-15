@@ -1,0 +1,82 @@
+
+[
+    {
+        
+        "name": "arkham",
+        "photo": {
+            "src": "Arkham.jpg",
+            "alt": "arkham"
+        },
+        "stats":{
+            "stat1": "intelligence",
+            "stat2": "durability",
+            "stat3": "combat"
+        }
+    },
+   
+    {
+        "name": "batcave",
+        "photo": {
+            "src": "Batcave.jpg",
+            "alt": "batcave"
+        },
+        "stats":{
+            "stat1": "strength",
+            "stat2": "speed", 
+            "stat3": "power"
+           
+        }
+    },
+    {
+        "name": "egout",
+        "photo": {
+            "src": "Egout.jpg",
+            "alt": "egout"
+        },
+        "stats":{
+            "stat1": "intelligence",
+            "stat2": "durability",
+            "stat3": "combat"
+        }
+    },
+   
+    {
+        "name": "gotham police station",
+        "photo": {
+            "src": "GothamPoliceStation.jpg",
+            "alt": "gothamPoliceStation"
+        },
+        "stats":{
+            "stat1": "intelligence",
+            "stat2": "speed",
+            "stat3": "power"
+        }
+    },
+    {
+        "name": "wayne enterprise",
+        "photo": {
+            "src": "WayneEnterprise.jpg",
+            "alt": "wayneEnterprise"
+        },
+        "stats":{
+            "stat1": "strength",
+            "stat2": "power",
+            "stat3": "combat"
+        }
+    },
+
+    {
+        "name": "wayne manor",
+        "photo": {
+            "src": "WayneManor.jpg",
+            "alt": "wayneManor"
+        },
+        "stats":{
+            "stat1": "intelligence",
+            "stat2": "strength",
+            "stat3": "durability"
+        }
+    }
+
+]
+

@@ -1,13 +1,516 @@
+/*GENERAL*/
+@font-face {
+  font-family: PoliceTxt;
+  src: url(./Font/Hero.otf) format("truetype");
+}
+@font-face {
+  font-family: PoliceTitre;
+  src: url(./Font/CovesLight.otf) format("truetype");
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: PoliceTxt !important;
+  /* max-width:100% ; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F94%2F16%2Fd0%2F9416d03b836bbb329a211d60da6a8884.jpg);
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+
+body a {
+  text-decoration: none;
+  font-family: PoliceTxt !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#settingsIcon {
+  width: 3vh;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h4:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, yellow, orange, yellow, red);
+}
+
+h2 {
+  font-family: PoliceTitre;
+}
+
+h4 {
+  font-family: PoliceTxt !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+audio {
+  margin: 10px;
+  height: 20px;
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper-logo {
+  width: 40%;
+}
+
+.logo-direct {
+  border-radius: 50%;
+  width: 8em;
+}
+
+/*PAGE HOME*/
+
+/*PAGE BIO*/
+.avatarBio {
+  max-width: 100%;
+  border-radius: 10%;
+  max-height: 309.351px;
+}
+
+.avatarName {
+  color: white;
+  font-weight: bold;
+}
+
+/*PAGE DETAILS*/
+.short-space {
+  padding-top: -11em;
+}
+
+.wrapper-image {
+  margin-top: 5vh;
+}
+
+#character-name {
+  font-size: 8vh;
+  margin-bottom: 6px;
+  background: linear-gradient(276deg, rgb(255, 255, 0), rgb(158, 180, 175));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+}
+
+.animated-background {
+  background: linear-gradient(276deg, rgb(255, 255, 0), rgb(158, 180, 175));
+  background-size: 200% auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-animation: AnimationName 5s ease-in infinite;
+  animation: AnimationName 5s ease-in infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.short-description {
+  font-size: 2.5vh;
+  margin-bottom: 30px;
+}
+.sous-description {
+  font-size: 2vh;
+  text-align: center;
+}
+/*PAGE PERSONNAGELIST*/
+.selectImage {
+  height: 40vh;
+  min-height: 25vh;
+  border-radius: 10%;
+}
+
+.playerButton {
+  height: 2.5vh;
+  border-radius: 10%;
+  font-family: PoliceTxt !important;
+  font-size: 1.8vh;
+  text-align: center;
+  border-style: solid;
+  width: 90%;
+  padding-top: 0.1em;
+}
+
+/*BOUTONS*/
+.selectItem-One {
+  border-color: yellow;
+}
+
+.selectItem-One:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
+}
+
+.selectItem-Two {
+  border-color: red;
+}
+
+.selectItem-Two:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
+}
+
+/*CARTES*/
+.selectImage-One {
+  object-fit: cover;
+  min-width: 35%;
+  background: linear-gradient(
+    276deg, 
+rgb(179, 179, 65),
+rgb(255, 255, 0),
+rgb(158, 180, 175), 
+rgb(255, 255, 0), 
+rgb(179, 179, 65)
+);
+  background-size: 200% auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-animation: AnimationName 6s ease-in infinite;
+  animation: AnimationName 6s ease-in infinite;
+}
+
+.selectImage-Two {
+  min-width: 35%;
+  object-fit: cover;
+  background: linear-gradient(
+    276deg,
+    rgb(87, 14, 14),
+    rgb(185, 40, 40),
+    rgb(158, 180, 175),
+    rgb(185, 40, 40),
+    rgb(87, 14, 14)
+  );
+  background-size: 200% auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-animation: AnimationName 6s ease-in infinite;
+  animation: AnimationName 6s ease-in infinite;
+}
+
+/*CHART*/
+.caption {
+  font-size: 1.2em!important;
+  fill: black !important; 
+  font-weight: 700; 
+  text-shadow: none !important;
+}
+
+
+/*ARENA*/
+/*Background*/
+
+.button-fight {
+  margin-right: 1.5vh !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.arkham {
+  background-image: url("/images/arene/Arkham.jpg");
+  background-size: 100% 100%;
+  height: 120vh;
+  background-attachment: fixed;
+}
+
+.batcave {
+  background-image: url("/images/arene/Batcave.jpg");
+  background-size: 100% 100%;
+  height: 120vh;
+  background-attachment: fixed;
+}
+
+.egout {
+  background-image: url("/images/arene/Egout.jpg");
+  background-size: 100% 100%;
+  height: 120vh;
+  background-attachment: fixed;
+}
+
+.gothamPoliceStation {
+  background-image: url("/images/arene/GothamPoliceStation.jpg");
+  background-size: 100% 100%;
+  height: 120vh;
+  background-attachment: fixed; 
+}
+
+.wayneEnterprise {
+  background-image: url("/images/arene/WayneEnterprise.jpg");
+  background-size: 100% 100%;
+  height: 120vh;
+  background-attachment: fixed; 
+}
+
+.wayneManor {
+  background-image: url("/images/arene/WayneManor.jpg");
+  background-size: 100% 100%;
+  height: 120vh; 
+  background-attachment: fixed; 
+}
+
+.winner {
+  color: lime;
+  text-shadow: 1px 1px 2px black;
+  font-family: PoliceTxt;
+}
+
+.loser {
+  color: red;
+  text-shadow: 1px 1px 2px black;
+  font-family: PoliceTxt;
+}
+
+.stat-wrapper {
+  height: 45px;
+  width: 45px;
+}
+
+.stat-fight {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover !important;
+  border-style: solid;
+  background-color: white;
+  border-color: yellow;
+  border-radius: 8%;
+}
+
+.stat-fight:hover {
+  transform: translateY(3px);
+  transition: 0.4s ease-out;
+}
+
+/*style-arènes*/
+.large-div {
+  width: 100% !important;
+}
+
+.avatarCombat {
+  min-width: 232px;
+  width: 80%;
+  border-radius: 8%;
+  height: 55vh;
+  max-height: 70vh;
+}
+
+.fight-name {
+  font-size: 4.6vh !important;
+  font-family: PoliceTxt !important;
+}
+
+.fight-title {
+  font-family: PoliceTitre;
+  text-transform: capitalize;
+  font-size: 7vh;
+  margin-bottom: 6px;
+  background: linear-gradient(yellow, orange, yellow, red);
+
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fight-status {
+  font-size: 3vh;
+  font-family: PoliceTxt !important;
+}
+
+/*BORDURES DEBUGG*/
+.border-green {
+  border-style: solid;
+  border-color: chartreuse;
+}
+
+.border-pink {
+  border-style: solid;
+  border-color: hotpink;
+}
+
+.border-blue {
+  border-style: solid;
+  border-color: royalblue;
+}
+
+.border-yellow {
+  border-style: solid;
+  border-color: yellow;
+}
+
+.border-purple {
+  border-style: solid;
+  border-color: purple;
+}
+
+.border-light {
+  border-style: solid;
+  border-color: lightblue;
+}
+/*page Combat/CombatTest*/
+body {
+  margin: 0;
+
+  /* border: 5px solid Yellow; */
+  border-radius: 1%;
+}
+
+.infoPerso {
+  background-color: rgba(255, 255, 255, 0.6);
+  /*opacity: 0.5;*/
+  color: black;
+  border: solid;
+  border-color: #f5e51b;
+  border-radius: 20px;
+}
+
+.alertDisplay {
+  text-transform: none;
+}
+
+#imgLoser {
+    filter: grayscale(1);
+}
+
+
+
+
+
+/*MOBILE*/
+@media only screen and (max-width: 767px) {
+  
+  .logo-direct{
+    width:5em; 
+  }
+
+  #arena-name{
+    font-size: 1.3em;
+  }
+
+}
+
+@media only screen and (min-width: 1015px) and (max-width: 1100px) {
+  .playerButton {
+    padding-top: 0.5em;
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .imageVs{
+    width: 20em;
+  }
+
+  .arkham {
+    background-image: url("/images/arene/Arkham.jpg");
+    background-size: cover;
+    height: 300vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .batcave {
+    background-image: url("/images/arene/Batcave.jpg");
+    background-size: cover;
+    height: 250vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .egout {
+    background-image: url("/images/arene/Egout.jpg");
+    background-size: cover;
+    height: 250vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .gothamPoliceStation {
+    background-image: url("/images/arene/GothamPoliceStation.jpg");
+    background-size: cover;
+    width: auto;
+    height: 250vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .wayneEnterprise {
+    background-image: url("/images/arene/WayneEnterprise.jpg");
+    background-size: cover;
+    height: 250vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
+  
+  .wayneManor {
+    background-image: url("/images/arene/WayneManor.jpg");
+    background-size: cover;
+    height: 250vh;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+  }
 }
