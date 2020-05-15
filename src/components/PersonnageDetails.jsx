@@ -62,11 +62,9 @@ class PersonnageDetails extends Component {
         return (
 
             <div className="pageDetails">
-                <Grid container justify="space-between">
-                    <Grid container item sm={1} md={1} lg={1}>
+                <Grid container sm={12} justify="space-between">
+                    <Grid container item sm={12} md={12} lg={12} justify="space-between">
                         <Logo />
-                    </Grid>
-                    <Grid>
                         <ButtonSettings />
                     </Grid>
                 </Grid>
@@ -81,67 +79,66 @@ class PersonnageDetails extends Component {
                 </Grid>
 
                 <Grid container direction="row" justify="center" alignItems="flex-start" className="infoPerso">
-                        <Grid item sm={12} md={12} lg={5}>
-                            <Grid container direction="row" alignItems="flex-start" justify="space-between">
-                                <Grid item sm={6} md={6} lg={5} >
-                                    <h3>Identity</h3>
+                    <Grid item sm={12} md={12} lg={6}>
+                        <Grid container direction="row" alignItems="flex-start" justify="space-between">
+                            <Grid item sm={6} md={6} lg={5} >
+                                <h3>Identity</h3>
+                                <ul>
+                                    <li>Place of Birth: {character.biography["place-of-birth"]}</li>
+                                    <li>First Appearance: {character.biography["first-appearance"]}</li>
+                                    <li>Publisher: {character.biography.publisher}</li>
+                                    <li>Aliases: {`${character.biography.aliases}`}</li>
+                                    <li>Alignment: {character.biography.alignment}</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid item sm={6} md={6} lg={5} >
+                                <h3>Appearance</h3>
+                                <ul>
+                                    <li>Height: {`${character.appearance.height}`}</li>
+                                    <li>Weight: {`${character.appearance.weight}`}</li>
+                                    <li>Race: {character.appearance.race}</li>
+                                    <li>Gender: {character.appearance.gender}</li>
+                                </ul>
+                            </Grid>
+
+                            <Grid container >
+                                <Grid item sm={6} md={6} lg={10}>
+                                    <h3>Work</h3>
                                     <ul>
-                                        <li>Place of Birth: {character.biography["place-of-birth"]}</li>
-                                        <li>First Appearance: {character.biography["first-appearance"]}</li>
-                                        <li>Publisher: {character.biography.publisher}</li>
-                                        <li>Aliases: {`${character.biography.aliases}`}</li>
-                                        <li>Alignment: {character.biography.alignment}</li>
+                                        <li>Occupation: {character.work.occupation}</li>
+                                        <li>Base of operation: {`${character.work.base}`}</li>
                                     </ul>
                                 </Grid>
 
-                                <Grid item sm={6} md={6} lg={5} >
-                                    <h3>Appearance</h3>
+                                <Grid item sm={6} md={6} lg={10}>
+                                    <h3>Connections</h3>
                                     <ul>
-                                        <li>Height: {`${character.appearance.height}`}</li>
-                                        <li>Weight: {`${character.appearance.weight}`}</li>
-                                        <li>Race: {character.appearance.race}</li>
-                                        <li>Gender: {character.appearance.gender}</li>
+                                        <li>Group Affiliation: {character.connections["group-affiliation"]}</li>
+                                        <li>Relatives: {`${character.connections.relatives}`}</li>
                                     </ul>
-                                </Grid>
-
-                                <Grid container >
-                                    <Grid item sm={6} md={6} lg={10}>
-                                        <h3>Work</h3>
-                                        <ul>
-                                            <li>Occupation: {character.work.occupation}</li>
-                                            <li>Base of operation: {`${character.work.base}`}</li>
-                                        </ul>
-                                    </Grid>
-
-                                    <Grid item sm={6} md={6} lg={10}>
-                                        <h3>Connections</h3>
-                                        <ul>
-                                            <li>Group Affiliation: {character.connections["group-affiliation"]}</li>
-                                            <li>Relatives: {`${character.connections.relatives}`}</li>
-                                        </ul>
-                                    </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
+                    </Grid>
 
-                        <Grid item sm={12} md={12} lg={4}>
-                            <Grid container direction="column" alignItems="center" justify="flex-start" >
-                                <Grid item>
-                                    <h3 >Powerstats</h3>
-                                </Grid>
+                    <Grid container lg={6} justify="center" alignItems="center">
+                        <Grid item sm={12} md={6} lg={7}>
+                            <Grid container direction="column" justify="center" alignItems="center" >
+                                    <Grid item sm={5} md={8}>
+                                        <h3 className="text-center">Powerstats</h3>
+                                    </Grid>
 
-                                <Grid item sm={12} md={12} lg={12} >
-
-                                    <RadarChart className="infoPerso"  
+                                <Grid item sm={5} md={8} lg={7}>
+                                    <RadarChart className="infoPerso"
                                         captions={{
                                             // columns
-                                            intelligence: `Intelligence:
-                                            ${dataIntelligence}`,
-                                            strength: `Strength: ${dataStrength}`,
-                                            power: `Power ${dataPower}`,
-                                            combat: `Combat ${dataCombat}`,
-                                            speed: `Speed ${dataSpeed}`,
-                                            durability: `Durability ${dataDurability}`
+                                            intelligence: `Intelligence: ${Math.round(dataIntelligence*100)}`,
+                                            strength: `Strength: ${Math.round(dataStrength*100)}`,
+                                            power: `Power ${Math.round(dataPower*100)}`,
+                                            combat: `Combat ${Math.round(dataCombat*100)}`,
+                                            speed: `Speed ${Math.round(dataSpeed*100)}`,
+                                            durability: `Durability ${Math.round(dataDurability*100)}`
                                         }}
                                         data={[
                                             {
@@ -162,16 +159,19 @@ class PersonnageDetails extends Component {
                             </Grid>
                         </Grid>
 
-                    <Grid item sm={12} md={6} lg={3}>
-                        <Grid container direction="column" alignContent="center" justify="center" className="  wrapper-image">
-                            <Grid item xs={10} className="floating-box animated-background">
-                                <img src={character.image.url} alt={character.name} />
+                        <Grid item sm={12} md={4} lg={3}>
+                            <Grid container direction="column" alignContent="center" justify="center" className="  wrapper-image">
+                                <Grid item xs={10} className="floating-box animated-background">
+                                    <img src={character.image.url} alt={character.name} />
+                                </Grid>
                             </Grid>
                         </Grid>
+
                     </Grid>
+
                 </Grid>
 
-                <Grid>                        
+                <Grid>
                     <ButtonBio />
                 </Grid>
 

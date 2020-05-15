@@ -21,7 +21,7 @@ export class PageCombat extends React.Component {
 
 
     render() {
-        const { perso1, perso2 } = this.state;
+     //   const { perso1, perso2 } = this.state;
         const { idPersoOne, idPersoTwo } = this.props;
         return (
             <Grid container direction="row" alignItems="center" justify="center">
